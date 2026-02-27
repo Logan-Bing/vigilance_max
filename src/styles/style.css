@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "./_typography.css";
+
+@theme {
+  /* primary color */
+  --color-base-primary: #DEB254;
+  --color-200-primary: #ECD59C;
+  --color-400-primary: #D79E38;
+  --color-500-primary: #C7882B;
+  --color-my-black: #212324;
+
+  --color-grey: #626769;
+  --bg-main: #F8F8F8;
+}
