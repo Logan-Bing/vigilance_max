@@ -1,0 +1,7 @@
+.btn-primary {
+  letter-spacing: 6%;
+  line-height: 16px;
+  color: var(--color-base-white);
+  font-weight: bold;
+  padding: 1rem 2rem;
+}

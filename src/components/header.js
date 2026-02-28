@@ -1,6 +1,16 @@
 
-export function Header() {
-  const div = document.createElement("div");
+export function Header(links) {
+  const template = document
+    .querySelector("#header-template")
+    .content
+    .cloneNode(true);
 
-  return div;
+  const ul = template.querySelector("ul");
+
+  links.forEach(link => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${link.href}">${link.label}</a>`
+    ul.append(li);
+  });
+  return template;
 }
