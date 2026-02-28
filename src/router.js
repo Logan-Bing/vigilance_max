@@ -1,8 +1,9 @@
 import { Header } from "./components/header";
-import { Button } from "./components/atomes/button";
+import { toggleSubnav } from "./state/componentsStates";
 
 const root = document.querySelector("#app");
-root.appendChild(Header([
-  { href: "/", label: "Gardiennage Humnain" },
-  { href: "/contact", label: "Contact" },
-]));
+root.appendChild(Header());
+
+const header = root.querySelector("header");
+const subnav = header.querySelector(".subnav");
+subnav.addEventListener("click", toggleSubnav(subnav))

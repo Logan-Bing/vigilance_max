@@ -2,6 +2,7 @@
 @import "./_typography.css";
 @import "./pages.css";
 @import "./_atomes.css";
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 @theme {
   /* primary color */
@@ -12,6 +13,6 @@
   --color-base-black: #212324;
   --color-base-white: #FFFFFF;
 
-  --color-grey: #626769;
-  --bg-main: #F8F8F8;
+  --color-base-grey: #626769;
+  --color-white-bg: #F8F8F8;
 }

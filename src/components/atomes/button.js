@@ -1,7 +1,7 @@
 
-export function Button(props) {
+export function Button(text) {
   const button = document.createElement("button");
   button.classList.add("bg-500-primary", "btn-primary");
-  button.textContent = props.text;
+  button.textContent = text;
   return button;
 }

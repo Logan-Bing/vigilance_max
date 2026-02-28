@@ -1,5 +1,6 @@
 .container {
   padding-inline: 32px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -11,7 +12,6 @@
 @media (min-width: 1280px) {
   .container {
     padding-inline: 0px;
-    margin: 0 auto;
     max-width: 1200px;
   }
 }

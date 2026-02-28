@@ -1,16 +1,10 @@
+import { Button } from "./atomes/button";
 
-export function Header(links) {
+export function Header() {
   const template = document
     .querySelector("#header-template")
     .content
     .cloneNode(true);
 
-  const ul = template.querySelector("ul");
-
-  links.forEach(link => {
-    const li = document.createElement("li");
-    li.innerHTML = `<a href="${link.href}">${link.label}</a>`
-    ul.append(li);
-  });
   return template;
 }

@@ -1,7 +1,15 @@
 .btn-primary {
-  letter-spacing: 6%;
+  background-color: var(--color-500-primary);
+  letter-spacing: 2px;
   line-height: 16px;
   color: var(--color-base-white);
   font-weight: bold;
   padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  color: var(--color-500-primary);
+  background-color: var(--color-base-white);
 }
