@@ -10,6 +10,9 @@
 
 <body>
   <div id="app"></div>
+  <media-block>
+    <p slot="content">Ceci est du content</p>
+  </media-block>
   <script type="module" src="/src/router.js"></script>
 
   <template id="header-template">
@@ -61,7 +64,7 @@
     </header>
     <!-- MOBILE NAV -->
     <div
-      class="mobile-nav fixed inset-0 bg-base-black text-base-white translate-x-full transition-transform duration-300">
+      class="mobile-nav fixed inset-0 bg-base-black text-base-white translate-x-full transition-transform duration-300 md:hidden">
       <nav class="h-full flex flex-col items-center justify-center text-center px-6">
         <div class="flex flex-col gap-6">
           <span class="text-3xl text-base-grey">gardiennage humain</span>

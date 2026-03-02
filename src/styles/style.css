@@ -4,6 +4,17 @@
 @import "./_atomes.css";
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
+body {
+  background-color: var(--color-white-bg);
+}
+
+.triangle {
+  background-color: var(--color-base-primary);
+  height: 100px;
+  width: 100px;
+  clip-path: polygon(100% 31%, 0 100%, 100% 100%);
+}
+
 @theme {
   /* primary color */
   --color-base-primary: #DEB254;
