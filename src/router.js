@@ -4,5 +4,3 @@ import { mediaBlock } from "./components/mediaBlock";
 const root = document.querySelector("#app");
 root.appendChild(Header());
 
-
-
