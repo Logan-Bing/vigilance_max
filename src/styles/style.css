@@ -8,11 +8,41 @@ body {
   background-color: var(--color-white-bg);
 }
 
-.triangle {
-  background-color: var(--color-base-primary);
-  height: 100px;
-  width: 100px;
-  clip-path: polygon(100% 31%, 0 100%, 100% 100%);
+.img-wrapper {
+  position: relative;
+  width: 583px;
+  height: 451px;
+  flex-shrink: 0;
+}
+
+/* Triangle doré bas-droite en CSS pur */
+.img-wrapper .triangle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 237px 339px;
+  border-color: transparent transparent #C9933A transparent;
+}
+
+/* Photo par-dessus le triangle */
+.img-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 533px;
+  height: 411px;
+  overflow: hidden;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.25);
+}
+
+.img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 @theme {

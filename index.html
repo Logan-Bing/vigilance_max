@@ -5,6 +5,11 @@
   <meta charset="UTF-8" />
   <link href="/src/styles/style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <title>vigilance-max</title>
 </head>
 
@@ -19,12 +24,12 @@
   <script type="module" src="/src/router.js"></script>
 
   <template id="header-template">
-    <header class="container z-10 relative flex items-center justify-center pt-8 md:justify-between">
+    <header class="container z-10 relative flex items-center justify-center pt-8 xl:justify-between">
       <a href="/">
-        <img src="./public/logos/fulllogo_transparent_nobuffer.png" class="w-14 cursor-pointer md:w-25" alt="logo">
+        <img src="./public/logos/fulllogo_transparent_nobuffer.png" class="w-14 cursor-pointer xl:w-25" alt="logo">
       </a>
       <nav
-        class="hidden md:flex items-center gap-16 font-semibold text-base-white font-urbanist font-semibold tracking-[1px]">
+        class="hidden xl:flex items-center gap-16 font-semibold text-base-white font-urbanist font-semibold tracking-[1px]">
         <ul class="flex gap-16">
           <li class="subnav cursor-pointer relative">
             <div class="flex gap-2">
@@ -59,7 +64,7 @@
       </nav>
 
       <!-- BURGER ICON MENU -->
-      <div class="flex flex-col absolute right-4 justify-between w-6 h-5 cursor-pointer burger-btn md:hidden">
+      <div class="flex flex-col absolute right-4 justify-between w-6 h-5 cursor-pointer burger-btn xl:hidden">
         <span class="block h-0.5 bg-500-primary transition-all"></span>
         <span class="block h-0.5 bg-500-primary transition-all"></span>
         <span class="block h-0.5 bg-500-primary transition-all"></span>
@@ -67,7 +72,7 @@
     </header>
     <!-- MOBILE NAV -->
     <div
-      class="mobile-nav fixed inset-0 bg-base-black text-base-white translate-x-full transition-transform duration-300 md:hidden">
+      class="mobile-nav fixed inset-0 bg-base-black text-base-white translate-x-full transition-transform duration-300 xl:hidden">
       <nav class="h-full flex flex-col items-center justify-center text-center px-6">
         <div class="flex flex-col gap-6">
           <span class="text-3xl text-base-grey">gardiennage humain</span>

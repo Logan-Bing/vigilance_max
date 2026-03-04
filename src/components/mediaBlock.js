@@ -19,8 +19,8 @@ export class mediaBlock extends HTMLElement {
 
   #buildListItem(text) {
     return `
-      <li flex gap-4>
-        <img src="../../public/icons/icon/Vector.svg" class="bg-500-primary">
+      <li class="flex gap-4">
+        <img src="../../public/icons/icon/Vector.svg">
         <span>${text}</span>
       </li>
     `
@@ -42,33 +42,35 @@ export class mediaBlock extends HTMLElement {
       .join('');
 
     this.innerHTML = `
-      <div class="wrapper flex items-center gap-8 container">
+      <div class="flex flex-col xl:flex-row items-center gap-8 container">
 
         <!-- left block -->
         <div class="content-wrapper flex flex-col gap-8">
 
           <div class="header flex flex-col gap-4">
-            <h3>${headerTitle}</h3>
-            <h2>${title}</h2>
+            <h3 class="text-500-primary">${headerTitle}</h3>
+            <h2 class="font-semibold">${title}</h2>
           </div>
 
           <div class="content flex flex-col gap-4">
-              <p>${firstContent}</p>
-              <p>${secondContent}</p>
+              <p class="font-medium">${firstContent}</p>
+              <pclass="font-medium">${secondContent}</p>
           </div>
 
           <ul class="list flex flex-col gap-2">
             ${listItems}
           </ul>
 
-          <button class="btn-primary">Demander un devis</button>
+          <button class="btn-primary self-start">Demander un devis</button>
 
         </div>
 
         <!-- right block -->
-        <div class="img-wrapper relative">
-          <img src=${imageUrl} alt=${imageAlt}>
+        <div class="img-wrapper">
           <div class="triangle"></div>
+          <div class="img-card">
+            <img src="${imageUrl}" alt="${imageAlt}">
+          </div>
         </div>
       </div>
       `;

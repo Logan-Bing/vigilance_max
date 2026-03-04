@@ -1,21 +1,31 @@
 h1 {
+  font-family: "Urbanist";
   font-size: 40px;
   line-height: 40px;
   letter-spacing: -2%;
 }
 
 h2 {
+  font-family: "Urbanist";
   font-size: 24px;
   line-height: 24px;
   letter-spacing: -2%;
+  color: var(--color-base-black);
 }
 
 h3 {
+  font-family: "Urbanist";
   font-size: 16px;
   text-transform: uppercase;
 }
 
 p {
+  color: var(--color-base-black);
+  font-family: "Montserrat";
   font-size: 16px;
   line-height: 24px;
+}
+
+span {
+  font-family: "Montserrat";
 }
