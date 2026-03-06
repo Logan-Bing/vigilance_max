@@ -35,14 +35,14 @@ export class mediaBlock extends HTMLElement {
     const imageAlt = this.#attr("alt");
     const info_1 = this.#attr("info-1");
     const info_2 = this.#attr("info-2");
-    const info_3 = this.#attr("info-1");
+    const info_3 = this.#attr("info-3");
 
     const listItems = [info_1, info_2, info_3]
       .map((i) => this.#buildListItem(i))
       .join('');
 
     this.innerHTML = `
-      <div class="flex flex-col xl:flex-row items-center gap-8 container">
+      <div class="flex flex-col xl:flex-row items-center gap-8">
 
         <!-- left block -->
         <div class="content-wrapper flex flex-col gap-8">
@@ -54,7 +54,7 @@ export class mediaBlock extends HTMLElement {
 
           <div class="content flex flex-col gap-4">
               <p class="font-medium">${firstContent}</p>
-              <pclass="font-medium">${secondContent}</p>
+              <p class="font-medium">${secondContent}</p>
           </div>
 
           <ul class="list flex flex-col gap-2">
