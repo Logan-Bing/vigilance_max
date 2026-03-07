@@ -42,7 +42,7 @@ export class mediaBlock extends HTMLElement {
       .join('');
 
     this.innerHTML = `
-      <div class="flex flex-col xl:flex-row items-center gap-8">
+      <div class="container flex flex-col xl:flex-row items-center gap-8">
 
         <!-- left block -->
         <div class="content-wrapper flex flex-col gap-8">

@@ -18,55 +18,58 @@
   <script type="module" src="/src/router.js"></script>
 
   <template id="header-template">
-    <header class="container z-10 relative flex items-center justify-center pt-8 xl:justify-between">
-      <a href="/">
-        <img src="./public/logos/fulllogo_transparent_nobuffer.png" class="w-14 cursor-pointer xl:w-25" alt="logo">
-      </a>
-      <nav
-        class="hidden xl:flex items-center gap-16 font-semibold text-base-white font-urbanist font-semibold tracking-[1px]">
-        <ul class="flex gap-16">
-          <li class="subnav cursor-pointer relative">
-            <div class="flex gap-2">
-              <a
-                class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out ">Gardiennage
-                Humain</a>
-              <img src="./public/icons/icon/Group.svg" alt="icone fleche" class="">
-            </div>
-            <ul class="subnav-wrapper bg-white-bg text-base-grey mt-2 p-4 flex flex-col gap-4 absolute hidden">
-              <li><a href="/agent_cynophile"
-                  class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Agent
-                  cynophile</a></li>
-              <li><a href="/agent_rondier"
-                  class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Agent
-                  rondier</a></li>
-              <li><a href="/agent_ssiap"
-                  class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Agent
-                  SSIAP</a></li>
-              <li><a href="/agent_intervention"
-                  class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Agent
-                  intervention</a></li>
-            </ul>
-          </li>
-          <li><a href="/Contact"
-              class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Contact</a>
-          </li>
-        </ul>
-        <button class="btn-primary flex gap-2 font-urbanist">
-          Devis
-          <img src="./public/icons/icon/Vector.svg" alt="icone mail">
-        </button>
-      </nav>
+    <div class="relative">
+      <header
+        class="container w-full z-20 absolute left-0 right-0 flex items-center justify-center pt-8 xl:justify-between">
+        <a href="/">
+          <img src="./public/logos/fulllogo_transparent_nobuffer.png" class="w-14 cursor-pointer xl:w-25" alt="logo">
+        </a>
+        <nav
+          class="hidden xl:flex items-center gap-16 font-semibold text-base-white font-urbanist font-semibold tracking-[1px]">
+          <ul class="flex gap-16">
+            <li class="subnav cursor-pointer relative">
+              <div class="flex gap-2">
+                <a
+                  class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out ">Gardiennage
+                  Humain</a>
+                <img src="./public/icons/icon/Group.svg" alt="icone fleche" class="">
+              </div>
+              <ul class="subnav-wrapper bg-white-bg text-base-grey mt-2 p-4 flex flex-col gap-4 absolute hidden">
+                <li><a href="/agent_cynophile"
+                    class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Agent
+                    cynophile</a></li>
+                <li><a href="/agent_rondier"
+                    class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Agent
+                    rondier</a></li>
+                <li><a href="/agent_ssiap"
+                    class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Agent
+                    SSIAP</a></li>
+                <li><a href="/agent_intervention"
+                    class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Agent
+                    intervention</a></li>
+              </ul>
+            </li>
+            <li><a href="/Contact"
+                class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Contact</a>
+            </li>
+          </ul>
+          <button class="btn-primary flex gap-2 font-urbanist">
+            Devis
+            <img src="./public/icons/icon/Vector.svg" alt="icone mail">
+          </button>
+        </nav>
 
-      <!-- BURGER ICON MENU -->
-      <div class="flex flex-col absolute right-4 justify-between w-6 h-5 cursor-pointer burger-btn xl:hidden">
-        <span class="block h-0.5 bg-500-primary transition-all"></span>
-        <span class="block h-0.5 bg-500-primary transition-all"></span>
-        <span class="block h-0.5 bg-500-primary transition-all"></span>
-      </div>
-    </header>
+        <!-- BURGER ICON MENU -->
+        <div class="flex flex-col absolute right-4 justify-between w-6 h-5 cursor-pointer burger-btn xl:hidden">
+          <span class="block h-0.5 bg-500-primary transition-all"></span>
+          <span class="block h-0.5 bg-500-primary transition-all"></span>
+          <span class="block h-0.5 bg-500-primary transition-all"></span>
+        </div>
+      </header>
+    </div>
     <!-- MOBILE NAV -->
     <div
-      class="mobile-nav fixed inset-0 bg-base-black text-base-white translate-x-full transition-transform duration-300 xl:hidden">
+      class="mobile-nav fixed z-10 inset-0 bg-base-black text-base-white translate-x-full transition-transform duration-300 xl:hidden">
       <nav class="h-full flex flex-col items-center justify-center text-center px-6">
         <div class="flex flex-col gap-6">
           <span class="text-3xl text-base-grey">gardiennage humain</span>
