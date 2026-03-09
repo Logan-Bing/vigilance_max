@@ -1,7 +1,12 @@
 import "../components/mediaBlock.js"
+import "../components/agents.js"
+import { Benefits } from "../components/static/benefits.js";
+import { Footer } from "../components/static/footer.js";
+
 
 export function Home() {
-  return `    
+  const template = document.createElement("template");
+  template.innerHTML = `    
     <section id=home class="flex flex-col gap-8 xl:gap-32">
       <div class="flex items-center justify-center bg-[url(../../public/images/home.webp)] h-screen">
         <div class="px-8 flex flex-col gap-8 items-center justify-center xl:max-w-7xl">
@@ -25,7 +30,21 @@ export function Home() {
           info-1="Une présence continue pour une sécurité sans interruption."
           info-2="Personnel formé, certifié et expérimenté." 
           info-3="Réactivité immédiate en cas d’incident"></media-block>
+      <agents-block
+          title="Agent cynophile"
+          content="Nos agents cynophiles assurent une surveillance renforcée des sites. Grâce au binôme maître-chien, toute présence suspecte est détectée rapidement."
+          info-1="détection rapide"
+          info-2="détection rapide"
+          src="../../public/images/rondier.png"
+      ></agents-block>
     </section>
   `
+
+  const section = template.content.querySelector("section");
+  const mediaBlock = section.querySelector("media-block");
+
+  mediaBlock.after(Benefits());
+
+  return template.content;
 }
 

@@ -1,4 +1,5 @@
 import { Header } from "./components/static/header";
+import { Footer } from "./components/static/footer";
 import { Home } from "./pages/home";
 import { Contact } from "./pages/contact";
 
@@ -7,6 +8,7 @@ root.appendChild(Header());
 
 const outlet = document.createElement("main");
 root.appendChild(outlet);
+root.appendChild(Footer());
 
 const routes = [
   { path: "/", handle: Home },
@@ -15,6 +17,6 @@ const routes = [
 const current_path = window.location.pathname;
 for (const route of routes) {
   if (route.path === current_path)
-    outlet.innerHTML = route.handle();
+    outlet.appendChild(route.handle());
 }
 

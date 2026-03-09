@@ -1,44 +1,24 @@
+import { Components } from "./components.js";
 
-export class mediaBlock extends HTMLElement {
+export class mediaBlock extends Components {
 
   constructor() {
     super();
   }
 
-  get label() {
-    return this.getAttribute("label");
-  }
-
-  connectedCallback() {
-    this.render();
-  }
-
-  #attr(name, fallback = '') {
-    return this.getAttribute(name) ?? fallback;
-  }
-
-  #buildListItem(text) {
-    return `
-      <li class="flex gap-4">
-        <img src="../../public/icons/icon/Vector.svg">
-        <span>${text}</span>
-      </li>
-    `
-  }
-
   render() {
-    const headerTitle = this.#attr("header-title");
-    const title = this.#attr("title");
-    const firstContent = this.#attr("first-content");
-    const secondContent = this.#attr("second-content");
-    const imageUrl = this.#attr("src");
-    const imageAlt = this.#attr("alt");
-    const info_1 = this.#attr("info-1");
-    const info_2 = this.#attr("info-2");
-    const info_3 = this.#attr("info-3");
+    const headerTitle = this.attr("header-title");
+    const title = this.attr("title");
+    const firstContent = this.attr("first-content");
+    const secondContent = this.attr("second-content");
+    const imageUrl = this.attr("src");
+    const imageAlt = this.attr("alt");
+    const info_1 = this.attr("info-1");
+    const info_2 = this.attr("info-2");
+    const info_3 = this.attr("info-3");
 
     const listItems = [info_1, info_2, info_3]
-      .map((i) => this.#buildListItem(i))
+      .map((i) => this.buildListItem(i))
       .join('');
 
     this.innerHTML = `

@@ -14,10 +14,34 @@
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="app">
+  </div>
   <script type="module" src="/src/router.js"></script>
+  <!-- TEMPLATE -->
+  <template id="benefits">
+    <div class="container flex flex-col text-center gap-8 xl:gap-16">
+      <h2>Pourquoi nous <span class="text-500-primary">choisir ?</span></h2>
+      <div class="flex flex-wrap justify-center items-center gap-8 gap-y-8 text-center xl:justify-between">
+        <div class="flex flex-col gap-4 items-center xl:gap-8 xl:max-w-64">
+          <img class="w-16 h-16" src="./public/icons/icon/benefits.png" alt="">
+          <p>Prestations adaptées aux besoins des clients</p>
+        </div>
+        <div class="flex flex-col gap-4 items-center xl:gap-8 xl:max-w-64">
+          <img class="w-16 h-16" src="./public/icons/icon/surveillance.png" alt="">
+          <p>Prestations adaptées aux besoins des clients</p>
+        </div>
+        <div class="flex flex-col gap-4 items-center xl:gap-8 xl:max-w-64">
+          <img class="w-16 h-16" src="./public/icons/icon/pro.png" alt="">
+          <p>Prestations adaptées aux besoins des clients</p>
+        </div>
+        <div class="flex flex-col gap-4 items-center xl:gap-8 xl:max-w-64">
+          <img class="w-16 h-16" src="./public/icons/icon/fast.png" alt="">
+          <p>Prestations adaptées aux besoins des clients</p>
+        </div>
+      </div>
+    </div>
+  </template>
   <template id="partners_carousel">
-
   </template>
   <template id="header-template">
     <div class="relative">
@@ -87,6 +111,116 @@
         <a href="/contact" class="mt-16 text-3xl">contact</a>
       </nav>
     </div>
+  </template>
+  <template id="footer-template">
+    <footer class="bg-base-black">
+      <div class="max-w-[1440px] mx-auto px-6 py-10 sm:px-10 lg:px-[120px] lg:py-[64px]">
+        <div class="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-[135px]">
+
+          <!-- Logo -->
+          <div class="w-[180px] sm:w-[220px] lg:w-[296px] shrink-0">
+            <img src="https://www.figma.com/api/mcp/asset/2762a944-117d-4e99-83c0-fee354365f4c" alt="Vigilance Max"
+              class="w-full h-auto object-contain" />
+          </div>
+
+          <!-- Colonnes -->
+          <div class="w-full grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
+
+            <!-- Sections -->
+            <div class="flex flex-col gap-8">
+              <h3 class="font-urbanist font-medium text-white text-2xl tracking-[0.02em]">Sections</h3>
+              <ul class="flex flex-col gap-4 font-montserrat font-normal text-white text-base">
+                <li><a href="#" class="hover:text-primary transition-colors">Accueil</a></li>
+                <li><a href="#" class="hover:text-primary transition-colors">Agent cynophile</a></li>
+                <li><a href="#" class="hover:text-primary transition-colors">Agent rondier</a></li>
+                <li><a href="#" class="hover:text-primary transition-colors">Agent SSIAP</a></li>
+                <li><a href="#" class="hover:text-primary transition-colors">Agent d'intervention</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="flex flex-col gap-8">
+              <h3 class="font-urbanist font-medium text-white text-2xl tracking-[0.02em]">Contact</h3>
+              <ul class="flex flex-col gap-4 font-montserrat text-base">
+                <li class="text-white">+33 01 02 03 04 05</li>
+                <li><a href="mailto:contact@gmail.com"
+                    class="font-bold text-primary hover:opacity-80 transition-opacity">contact@gmail.com</a></li>
+                <li><a href="#" class="font-bold text-primary hover:opacity-80 transition-opacity">Contact</a></li>
+              </ul>
+            </div>
+
+            <!-- Adresse -->
+            <div class="flex flex-col gap-8">
+              <h3 class="font-urbanist font-medium text-white text-2xl tracking-[0.02em]">Adresse</h3>
+              <ul class="flex flex-col gap-4 font-montserrat text-base">
+                <li class="text-white">Nazar</li>
+                <li><a href="#" class="font-bold text-primary hover:opacity-80 transition-opacity">Contact</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+  </template>
+  <template id="form-template">
+    <section class="container px-6 py-12 bg-white shadow-custom sm:px-10 lg:px-[120px] lg:py-[64px]">
+
+      <!-- Titre -->
+      <h2 class="font-urbanist font-semibold text-center text-[#212324] text-2xl sm:text-3xl mb-10">
+        Parlez nous de votre <span class="text-500-primary">projet</span>
+      </h2>
+
+      <!-- Formulaire -->
+      <form class="max-w-[740px] mx-auto flex flex-col gap-6">
+
+        <!-- Ligne 1 : Prénom + Entreprise -->
+        <div class="flex flex-col gap-6 sm:flex-row sm:gap-4">
+          <div class="flex flex-col gap-2 w-full">
+            <label class="font-montserrat text-sm text-[#212324]">Prénom</label>
+            <input type="text" placeholder="Jean"
+              class="w-full border border-gray-300 rounded-2xl px-4 py-3 font-montserrat text-sm text-base-black placeholder-gray-400 outline-none focus:border-primary transition-colors" />
+          </div>
+          <div class="flex flex-col gap-2 w-full">
+            <label class="font-montserrat text-sm text-[#212324]">Entreprise</label>
+            <input type="text" placeholder="Total energie"
+              class="w-full border border-gray-300 rounded-2xl px-4 py-3 font-montserrat text-sm text-base-black placeholder-gray-400 outline-none focus:border-primary transition-colors" />
+          </div>
+        </div>
+
+        <!-- Ligne 2 : Email + Téléphone -->
+        <div class="flex flex-col gap-6 sm:flex-row sm:gap-4">
+          <div class="flex flex-col gap-2 w-full">
+            <label class="font-montserrat text-sm text-[#212324]">Email</label>
+            <input type="email" placeholder="contact@gmail.com"
+              class="w-full border border-gray-300 rounded-2xl px-4 py-3 font-montserrat text-sm text-base-black placeholder-gray-400 outline-none focus:border-primary transition-colors" />
+          </div>
+          <div class="flex flex-col gap-2 w-full">
+            <label class="font-montserrat text-sm text-[#212324]">Numéro de téléphone</label>
+            <input type="tel" placeholder="01020305"
+              class="w-full border border-gray-300 rounded-2xl px-4 py-3 font-montserrat text-sm text-base-black placeholder-gray-400 outline-none focus:border-primary transition-colors" />
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="flex flex-col gap-2 items-center">
+          <div class="w-full sm:w-[360px] flex flex-col gap-2">
+            <label class="font-montserrat text-sm text-[#212324]">Message</label>
+            <textarea placeholder="message" rows="5"
+              class="w-full border border-gray-300 rounded-2xl px-4 py-3 font-montserrat text-sm text-base-black placeholder-gray-400 outline-none focus:border-primary transition-colors resize-none"></textarea>
+          </div>
+        </div>
+
+        <!-- Bouton -->
+        <div class="flex justify-center">
+          <button type="submit" class="btn-primary">
+            Envoyer
+          </button>
+        </div>
+
+      </form>
+
+    </section>
   </template>
 </body>
 
