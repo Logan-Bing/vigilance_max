@@ -17,7 +17,7 @@ export class Components extends HTMLElement {
   buildListItem(text) {
     return `
       <li class="flex gap-4">
-        <img src="../../public/icons/icon/Vector.svg">
+        <img class="w-6" src="../../public/icons/icon/Check.svg">
         <span>${text}</span>
       </li>
     `

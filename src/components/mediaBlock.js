@@ -16,16 +16,20 @@ export class mediaBlock extends Components {
     const info_1 = this.attr("info-1");
     const info_2 = this.attr("info-2");
     const info_3 = this.attr("info-3");
+    let reverse = this.attr("reverse");
+
+    if (!reverse)
+      reverse = "flex-row";
 
     const listItems = [info_1, info_2, info_3]
       .map((i) => this.buildListItem(i))
       .join('');
 
     this.innerHTML = `
-      <div class="container flex flex-col xl:flex-row items-center gap-8">
+      <div class="container flex flex-col xl:${reverse} items-center gap-8">
 
         <!-- left block -->
-        <div class="content-wrapper flex flex-col gap-8">
+        <div class="flex flex-col gap-8">
 
           <div class="header flex flex-col gap-4">
             <h3 class="text-500-primary">${headerTitle}</h3>

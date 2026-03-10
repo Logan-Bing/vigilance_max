@@ -61,3 +61,21 @@
     border-color: transparent transparent #C9933A transparent;
   }
 }
+
+/* carousel partenaires styles */
+/* animation handled in JS; leave class for identification */
+.animate-scroll {
+  /* movement handled in JS; track will be transformed */
+  transition: transform 0.8s ease; /* smooth swipe */
+  will-change: transform;
+}
+
+.logo img {
+  display: block;
+  max-width: 150px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.logo img:hover {
+  transform: scale(1.05);
+  opacity: .85;
+}
