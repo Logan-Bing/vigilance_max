@@ -8,7 +8,7 @@ export function Home() {
   const template = document.createElement("template");
   template.innerHTML = `    
     <section id=home class="flex flex-col gap-8 xl:gap-32">
-      <div class="flex items-center justify-center bg-[url(../../public/images/home.webp)] h-screen">
+      <div class="flex items-center justify-center bg-[url(/images/home.webp)] h-screen">
         <div class="px-8 flex flex-col gap-8 items-center justify-center xl:max-w-7xl">
           <div class="flex items-center justify-center bg-base-black rounded-full">
             <ul class="flex gap-8 m-0 text-base-white p-4">
@@ -18,7 +18,7 @@ export function Home() {
             </ul>
           </div>
           <h1 class="text-center text-base-white">Votre partenaire en gardiennage & sécurité humaine <span class="text-500-primary">commerces et sites industriels</span></h1>
-          <button class="btn-primary">Demander un devis </button>
+          <a class="btn-primary" href="/Contact">Demander un devis</a>
         </div>
       </div> 
       <media-block 
@@ -38,7 +38,7 @@ export function Home() {
               content="Nos agents cynophiles assurent une surveillance renforcée des sites. Grâce au binôme maître-chien, toute présence suspecte est détectée rapidement."
               info-1="détection rapide"
               info-2="détection rapide"
-              src="../../public/images/rondier.png"
+              src="/images/cynophile.png"
               href="/agent_cynophile"
           ></agents-block>
           <agents-block
@@ -46,21 +46,21 @@ export function Home() {
               content="Nos agents rondiers effectuent des rondes de surveillance régulières, contrôlent les installations et signalent toute anomalie.       pour assurer securité"
               info-1="détection rapide"
               info-2="détection rapide"
-              src="../../public/images/rondier.png"
+              src="/images/rondier.png"
           ></agents-block>
           <agents-block
-              title="Agent Rondier"
+              title="Agent d'intervenon"
               content="Nos agents rondiers effectuent des rondes de surveillance régulières, contrôlent les installations et signalent toute anomalie.       pour assurer securité"
               info-1="détection rapide"
               info-2="détection rapide"
-              src="../../public/images/rondier.png"
+              src="/images/intervention.png"
           ></agents-block>
           <agents-block
-              title="Agent Rondier"
-              content="Nos agents rondiers effectuent des rondes de surveillance régulières, contrôlent les installations et signalent toute anomalie.       pour assurer securité"
+              title="Agent ssiap 1 - 2 - 3"
+              content="Nos agents SSIAP disposent des compétences nécessaires pour anticiper les risques incendie, porter  assistance aux personnes et gérer les situations critiques."
               info-1="détection rapide"
               info-2="détection rapide"
-              src="../../public/images/rondier.png"
+              src="/images/saap.png"
           ></agents-block>
         </div>
       </section>
@@ -70,7 +70,7 @@ export function Home() {
           title="Une solution personnalisée selon votre type de risque"
           first-content="Vigilance Max déploie principalement ses équipes en Île-de-France. Selon les besoins de nos clients et la nature des missions, nous pouvons également intervenir sur l’ensemble du territoire national."
           second-content="Nous intervenons auprès des entreprises, des chantiers, des commerces et des sites industriels en mettant en place des dispositifs de sécurité adaptés à chaque environnement"
-          src="./public/images/about.webp" alt="image"
+          src="/images/security.png" alt="image"
           info-1="Une vision 360° de vos problématiques"
           info-2="Un accompagnement sur-mesure" 
           info-3="Des solutions flexibles, 24h/24 et 7j/7"

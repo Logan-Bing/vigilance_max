@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <title>vigilance-max</title>
 </head>
 
@@ -77,10 +78,10 @@
                 class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Contact</a>
             </li>
           </ul>
-          <button class="btn-primary flex gap-2 font-urbanist">
+          <a href="/Contact" class="btn-primary flex gap-2 font-urbanist">
             Devis
             <img src="./public/icons/icon/Vector.svg" alt="icone mail">
-          </button>
+          </a>
         </nav>
 
         <!-- BURGER ICON MENU -->
@@ -176,12 +177,12 @@
         <div class="flex flex-col gap-6 sm:flex-row sm:gap-4">
           <div class="flex flex-col gap-2 w-full">
             <label class="font-montserrat text-sm text-[#212324]">Prénom</label>
-            <input type="text" placeholder="Jean"
+            <input name="name" type="text" placeholder="Jean"
               class="w-full border border-gray-300 rounded-2xl px-4 py-3 font-montserrat text-sm text-base-black placeholder-gray-400 outline-none focus:border-primary transition-colors" />
           </div>
           <div class="flex flex-col gap-2 w-full">
             <label class="font-montserrat text-sm text-[#212324]">Entreprise</label>
-            <input type="text" placeholder="Total energie"
+            <input name="buisness" type="text" placeholder="Total energie"
               class="w-full border border-gray-300 rounded-2xl px-4 py-3 font-montserrat text-sm text-base-black placeholder-gray-400 outline-none focus:border-primary transition-colors" />
           </div>
         </div>
@@ -190,12 +191,12 @@
         <div class="flex flex-col gap-6 sm:flex-row sm:gap-4">
           <div class="flex flex-col gap-2 w-full">
             <label class="font-montserrat text-sm text-[#212324]">Email</label>
-            <input type="email" placeholder="contact@gmail.com"
+            <input name="email" type="email" placeholder="contact@gmail.com"
               class="w-full border border-gray-300 rounded-2xl px-4 py-3 font-montserrat text-sm text-base-black placeholder-gray-400 outline-none focus:border-primary transition-colors" />
           </div>
           <div class="flex flex-col gap-2 w-full">
             <label class="font-montserrat text-sm text-[#212324]">Numéro de téléphone</label>
-            <input type="tel" placeholder="01020305"
+            <input name="tel" type="tel" placeholder="01020305"
               class="w-full border border-gray-300 rounded-2xl px-4 py-3 font-montserrat text-sm text-base-black placeholder-gray-400 outline-none focus:border-primary transition-colors" />
           </div>
         </div>
@@ -204,7 +205,7 @@
         <div class="flex flex-col gap-2 items-center">
           <div class="w-full sm:w-[360px] flex flex-col gap-2">
             <label class="font-montserrat text-sm text-[#212324]">Message</label>
-            <textarea placeholder="message" rows="5"
+            <textarea name="message" placeholder="message" rows="5"
               class="w-full border border-gray-300 rounded-2xl px-4 py-3 font-montserrat text-sm text-base-black placeholder-gray-400 outline-none focus:border-primary transition-colors resize-none"></textarea>
           </div>
         </div>

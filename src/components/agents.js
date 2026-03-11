@@ -33,11 +33,11 @@ export class AgentBlock extends Components {
             
             <ul class="flex flex-col gap-2">${listItems}</ul>
 
-            <button class="btn-primary self-start"><a href="${redirectUrl}" >En savoir plus</a></button>
+            <a class="btn-primary self-start" href="${redirectUrl}" >En savoir plus</a>
 
           </div>
           <!--Image Block-->
-          <img class="hidden lg:block" src="${imgUrl}" alt="${imgAlt}">
+          <img class="hidden lg:block" src="${imgUrl}" alt="${imgAlt}" loading="lazy">
         </div>
 
       </div>

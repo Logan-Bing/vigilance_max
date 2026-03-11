@@ -26,7 +26,7 @@ export class mediaBlock extends Components {
       .join('');
 
     this.innerHTML = `
-      <div class="container flex flex-col xl:${reverse} items-center gap-8">
+      <div class="container flex flex-col xl:flex-row items-center gap-8">
 
         <!-- left block -->
         <div class="flex flex-col gap-8">
@@ -45,7 +45,7 @@ export class mediaBlock extends Components {
             ${listItems}
           </ul>
 
-          <button class="btn-primary self-start">Demander un devis</button>
+          <a class="btn-primary self-start" href="/Contact">Demander un devis</a>
 
         </div>
 
@@ -53,7 +53,7 @@ export class mediaBlock extends Components {
         <div class="img-wrapper">
           <div class="triangle"></div>
           <div class="img-card">
-            <img src="${imageUrl}" alt="${imageAlt}">
+            <img src="${imageUrl}" alt="${imageAlt}" loading="lazy">
           </div>
         </div>
       </div>
