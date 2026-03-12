@@ -1,8 +1,17 @@
+import { Carousel } from "../components/carousel";
 
 export function Contact() {
-  return `
-    <section id="contact">
-      <h1>Hello</h1>
-    </section>
+  const template = document.createElement("template");
+  template.innerHTML = `
   `
+
+
+
+
+
+
+
+
+
+  return template.content;
 }

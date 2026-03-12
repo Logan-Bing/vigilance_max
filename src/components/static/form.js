@@ -1,4 +1,5 @@
 
+
 export function Form() {
   const template = document.querySelector("#form-template").cloneNode(true).content;
   const form = template.querySelector("form");
@@ -78,20 +79,30 @@ export function Form() {
     return valid;
   }
 
+  function displayLoader() {
+    for (const child of form.children) {
+      child.classList.add("hidden");
+    }
+    const div = document.createElement("div");
+    div.classList.add("loader", "mx-auto");
+    form.appendChild(div);
+  }
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     if (!validateAll()) return;
 
-    emailjs.sendForm('service_nbikay2', 'template_ud96yce', form, import.meta.env.VITE_EMAILJS_KEY)
-      .then(() => console.log('Mail client envoyé!'))
-      .catch((error) => console.log("Failed client!", error));
-
-    emailjs.sendForm('service_nbikay2', 'template_ewbdd4b', form, import.meta.env.VITE_EMAILJS_KEY)
-      .then(() => console.log('Mail admin envoyé!'))
-      .catch((error) => console.log("Failed admin!", error));
-
-    window.location.href = "/Success"
+    const sendClient = emailjs.sendForm('service_nbikay2', 'template_ud96yce', form, import.meta.env.VITE_EMAILJS_KEY)
+    const sendAdmin = emailjs.sendForm('service_nbikay2', 'template_ewbdd4b', form, import.meta.env.VITE_EMAILJS_KEY)
+    Promise.all([sendClient, sendAdmin])
+      .then(() => {
+        setTimeout(() => {
+          window.location.href = "/Success"
+        }, 1000)
+      })
+      .catch((error) => alert(error));
+    displayLoader();
   });
 
   return template;
