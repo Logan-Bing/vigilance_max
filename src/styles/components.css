@@ -48,6 +48,62 @@
   display: block;
 }
 
+.item {
+  margin: 40px 10px;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel__container {
+  transition: transform 0.3s;
+}
+
+.carousel__container::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.carousel__item {
+  float: left;
+}
+
+.carousel__next,
+.carousel__prev {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #FFF url(../../public/icons/icon/forward.svg) center center no-repeat;
+  background-size: 20px 20px;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -20px;
+  right: -20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.carousel__next:hover,
+.carousel__prev:hover {
+  transform: scale(1.2)
+}
+
+.carousel__prev {
+  background-image: url(../../public/icons/icon/back.svg);
+  right: auto;
+  left: -20px;
+}
+
+.carousel__prev--hidden,
+.carousel__next--hidden {
+  opacity: 0;
+  cursor: initial;
+}
+
+
 @media (min-width: 1280px) {
   .triangle {
     display: block;
@@ -66,7 +122,8 @@
 /* animation handled in JS; leave class for identification */
 .animate-scroll {
   /* movement handled in JS; track will be transformed */
-  transition: transform 0.8s ease; /* smooth swipe */
+  transition: transform 0.8s ease;
+  /* smooth swipe */
   will-change: transform;
 }
 
@@ -75,6 +132,7 @@
   max-width: 150px;
   transition: transform .3s ease, opacity .3s ease;
 }
+
 .logo img:hover {
   transform: scale(1.05);
   opacity: .85;

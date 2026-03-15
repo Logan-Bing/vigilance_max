@@ -18,6 +18,8 @@ export function Header() {
 
   btnBurger.addEventListener("click", () => {
     mobileNav.classList.toggle("translate-x-full");
+    const body = document.querySelector("body");
+    body.classList.toggle("overflow-y-hidden");
   })
   return template;
 }

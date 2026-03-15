@@ -20,9 +20,9 @@ export class AgentBlock extends Components {
       .join('');
 
     this.innerHTML = `
-      <div class="p-4 shadow-custom bg-white xl:max-w-145">
+      <div class="mx-3.5 p-4 shadow-custom bg-white max-w-145">
 
-        <div class="flex gap-8">
+        <div class="flex justify-between">
           <!--Content Block-->
           <div class="flex flex-col gap-8 max-w-60">
 
@@ -37,7 +37,7 @@ export class AgentBlock extends Components {
 
           </div>
           <!--Image Block-->
-          <img class="hidden lg:block" src="${imgUrl}" alt="${imgAlt}" loading="lazy">
+          <img src="${imgUrl}" alt="${imgAlt}" loading="lazy">
         </div>
 
       </div>

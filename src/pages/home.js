@@ -1,5 +1,6 @@
 import "../components/mediaBlock.js"
 import "../components/agents.js"
+import { Carousel } from "../components/carousel.js";
 import { Benefits } from "../components/static/benefits.js";
 import { Form } from "../components/static/form.js";
 
@@ -7,7 +8,7 @@ import { Form } from "../components/static/form.js";
 export function Home() {
   const template = document.createElement("template");
   template.innerHTML = `    
-    <section id=home class="flex flex-col gap-8 xl:gap-32">
+    <section id=home class="overflow-x-hidden flex flex-col gap-8 xl:gap-32">
       <div class="flex items-center justify-center bg-[url(/images/0_home.webp)] h-screen">
         <div class="px-8 flex flex-col gap-8 items-center justify-center xl:max-w-7xl">
           <div class="flex items-center justify-center bg-base-black rounded-full">
@@ -30,9 +31,9 @@ export function Home() {
           info-1="Une présence continue pour une sécurité sans interruption."
           info-2="Personnel formé, certifié et expérimenté." 
           info-3="Réactivité immédiate en cas d’incident"></media-block>
-      <section class="container flex flex-col gap-16">
+      <section class="flex flex-col gap-16 container">
         <h2 class="text-center">Nos différents <span class="text-500-primary">agents</span></h2>
-        <div class="flex flex-wrap gap-8 justify-center items-center">
+        <div class="carousel-agents">
           <agents-block
               title="Agent cynophile"
               content="Nos agents cynophiles assurent une surveillance renforcée des sites. Grâce au binôme maître-chien, toute présence suspecte est détectée rapidement."
@@ -82,6 +83,8 @@ export function Home() {
   const section = template.content.querySelector("section");
   const mediaBlock = section.querySelector("media-block");
   const secteurs = section.querySelector("#secteurs");
+  const carousel = section.querySelector(".carousel-agents");
+  new Carousel(carousel, { slideView: 2, slideToScroll: 2 });
 
   mediaBlock.after(Benefits());
   secteurs.after(Form());

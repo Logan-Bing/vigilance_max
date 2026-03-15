@@ -1,6 +1,4 @@
 
-const carousel = document.querySelector("#carousel_1");
-
 export class Carousel {
 
   constructor(element, options) {
@@ -9,16 +7,78 @@ export class Carousel {
       slideView: 1,
       slideToScroll: 1
     }, options)
-    this.children = Array.from(element.children);
-    const root = this.createDivWithClass("carousel");
-    const container = this.createDivWithClass("carousel__container");
-    root.appendChild(container);
-    this.element.appendChild(root);
-    this.children.forEach((child) => {
+    let children = Array.from(element.children);
+    this.root = this.createDivWithClass("carousel");
+    this.container = this.createDivWithClass("carousel__container");
+    this.isMobile = false;
+    this.currentItem = 0;
+    this.root.appendChild(this.container);
+    this.element.appendChild(this.root);
+    this.moveCallbacks = [];
+    this.items = children.map((child) => {
       const item = this.createDivWithClass("carousel__item");
-      item.appendChild(child)
-      container.appendChild(item);
+      item.appendChild(child);
+      this.container.appendChild(item);
+      return item
     })
+    this.setStyle();
+    this.createNavigation();
+    this.moveCallbacks.forEach(cb => cb(0));
+    this.onWindowResize();
+    window.addEventListener('resize', this.onWindowResize.bind(this));
+  }
+
+  setStyle() {
+    let ratio = this.items.length / this.slideView;
+    this.container.style.width = (ratio * 100) + "%";
+    this.items.forEach(item => item.style.width = ((100 / this.slideView) / ratio) + "%");
+  };
+
+  createNavigation() {
+    const nextButton = this.createDivWithClass("carousel__next");
+    const prevButton = this.createDivWithClass("carousel__prev");
+    this.root.appendChild(nextButton);
+    this.root.appendChild(prevButton);
+    nextButton.addEventListener("click", this.next.bind(this));
+    prevButton.addEventListener("click", this.prev.bind(this));
+    this.onMove(index => {
+      if (index === 0)
+        prevButton.classList.add("carousel__prev--hidden");
+      else
+        prevButton.classList.remove("carousel__prev--hidden");
+      if (this.items[this.currentItem + this.slideView] === undefined)
+        nextButton.classList.add("carousel__next--hidden");
+      else
+        nextButton.classList.remove("carousel__next--hidden");
+    })
+  }
+
+  prev() {
+    this.goToItem(this.currentItem - this.slideToScroll);
+  }
+
+  next() {
+    this.goToItem(this.currentItem + this.slideToScroll);
+  }
+
+  goToItem(index) {
+    let translateX = index * -100 / this.items.length;
+    this.container.style.transform = 'translate3d(' + translateX + '%, 0, 0)'
+    this.currentItem = index;
+    this.moveCallbacks.forEach(cb => cb(index));
+  }
+
+  onMove(cb) {
+    this.moveCallbacks.push(cb);
+  }
+
+  onWindowResize() {
+    let mobile = window.innerWidth < 1280;
+    if (mobile !== this.isMobile) {
+      this.isMobile = mobile;
+      this.setStyle();
+      this.moveCallbacks.forEach((cb) => cb(this.currentItem))
+    }
   }
 
   createDivWithClass(className) {
@@ -26,6 +86,13 @@ export class Carousel {
     div.setAttribute("class", className);
     return div;
   }
+
+  get slideView() {
+    return this.isMobile ? 1 : this.options.slideView;
+  }
+
+  get slideToScroll() {
+    return this.isMobile ? 1 : this.options.slideToScroll;
+  }
 }
 
-const carouselInstance = new Carousel(carousel, { slideView: 3 });
