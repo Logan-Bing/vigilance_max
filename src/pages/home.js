@@ -9,19 +9,23 @@ export function Home() {
   const template = document.createElement("template");
   template.innerHTML = `    
     <section id=home class="overflow-x-hidden flex flex-col gap-8 xl:gap-32">
-      <div class="flex items-center justify-center bg-[url(/images/0_home.webp)] h-screen">
-        <div class="px-8 flex flex-col gap-8 items-center justify-center xl:max-w-7xl">
-          <div class="flex items-center justify-center bg-base-black rounded-full">
-            <ul class="flex gap-8 m-0 text-base-white p-4">
-              <li>Sécurité 24/24h</li>
-              <li>Présence dissuasive</li>
-              <li>Réactivité garantie</li>
-            </ul>
+      <div class="flex flex-col">
+        <div class="flex items-center justify-center bg-[url(/images/0_home.webp)] h-screen">
+          <div class="px-8 flex flex-col gap-8 items-center justify-center xl:max-w-7xl">
+            <div class="flex items-center justify-center bg-base-black rounded-full">
+              <ul class="flex gap-8 m-0 text-base-white p-4">
+                <li>Sécurité 24/24h</li>
+                <li>Présence dissuasive</li>
+                <li>Réactivité garantie</li>
+              </ul>
+            </div>
+            <h1 class="text-center text-base-white">Votre partenaire en gardiennage & sécurité humaine <span class="text-500-primary">commerces et sites industriels</span></h1>
+            <a class="btn-primary" href="/Contact">Demander un devis</a>
           </div>
-          <h1 class="text-center text-base-white">Votre partenaire en gardiennage & sécurité humaine <span class="text-500-primary">commerces et sites industriels</span></h1>
-          <a class="btn-primary" href="/Contact">Demander un devis</a>
+        </div> 
+        <div id="partners-placeholder" class="bg-white py-8">
         </div>
-      </div> 
+      </div>
       <media-block 
           header-title="A propos" 
           title="À propos de Vigilence Max"
@@ -83,8 +87,15 @@ export function Home() {
   const section = template.content.querySelector("section");
   const mediaBlock = section.querySelector("media-block");
   const secteurs = section.querySelector("#secteurs");
-  const carousel = section.querySelector(".carousel-agents");
-  new Carousel(carousel, { slideView: 2, slideToScroll: 2 });
+  const agentCarousel = section.querySelector(".carousel-agents");
+  new Carousel(agentCarousel, { slideView: 2, slideToScroll: 2 });
+
+
+  const partnerPlaceholder = section.querySelector("#partners-placeholder");
+  const partnerTemplate = document.querySelector("#partners").content.cloneNode(true);
+  const partnerCarousel = partnerTemplate.querySelector(".partners-wrapper");
+  new Carousel(partnerCarousel, { slideView: 5, slideToScroll: 1 });
+  partnerPlaceholder.appendChild(partnerCarousel);
 
   mediaBlock.after(Benefits());
   secteurs.after(Form());

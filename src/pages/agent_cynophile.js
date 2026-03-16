@@ -1,5 +1,7 @@
 import { AgentBanner } from "../components/agentBanner";
 import { Benefits } from "../components/static/benefits";
+import { AgentCard } from "../components/agentCard";
+import { Carousel } from "../components/carousel";
 
 export function AgentCynophile() {
   const template = document.createElement("template");
@@ -24,11 +26,61 @@ export function AgentCynophile() {
         info-2="Personnel formé, certifié et expérimenté." 
         info-3="Réactivité immédiate en cas d’incident">
     </media-block>
+    <div class="container carousel-cards">
+      <div class="flex items-center justify-center">
+        <agent-card
+        title="Agent Rondier"
+        content="En savoir plus sur l'agent rondier..."
+        src="/images/Cynophile_card.png"
+        alt="Agent Rondier"
+        href="/agent_rondier">
+        </agent-card>
+      </div>
+      <div class="flex items-center justify-center">
+        <agent-card
+        title="Agent Rondier"
+        content="En savoir plus sur l'agent rondier..."
+        src="/images/Cynophile_card.png"
+        alt="Agent Rondier"
+        href="/agent_rondier">
+        </agent-card>
+      </div>
+      <div class="flex items-center justify-center">
+        <agent-card
+        title="Agent Rondier"
+        content="En savoir plus sur l'agent rondier..."
+        src="/images/Cynophile_card.png"
+        alt="Agent Rondier"
+        href="/agent_rondier">
+        </agent-card>
+      </div>
+      <div class="flex items-center justify-center">
+        <agent-card
+        title="Agent Rondier"
+        content="En savoir plus sur l'agent rondier..."
+        src="/images/Cynophile_card.png"
+        alt="Agent Rondier"
+        href="/agent_rondier">
+        </agent-card>
+      </div>
+      <div class="flex items-center justify-center">
+        <agent-card
+        title="Agent Rondier"
+        content="En savoir plus sur l'agent rondier..."
+        src="/images/Cynophile_card.png"
+        alt="Agent Rondier"
+        href="/agent_rondier">
+        </agent-card>
+      </div>
+    </div>
   </section>
   `
 
   const section = template.content.querySelector("section");
   const mediaBlock = section.querySelector("media-block");
   mediaBlock.after(Benefits());
+  const carousel = section.querySelector(".carousel-cards");
+  new Carousel(carousel, { slideView: 3, slideToScroll: 3 })
+
   return template.content;
 }
