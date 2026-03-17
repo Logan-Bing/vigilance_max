@@ -127,7 +127,7 @@ export class AgentBanner extends Components {
             </h1>
 
             <!-- Description -->
-            <p class="text-white">
+            <p class="text-base-grey">
               ${description}
             </p>
 

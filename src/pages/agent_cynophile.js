@@ -29,11 +29,11 @@ export function AgentCynophile() {
     <div class="container carousel-cards">
       <div class="flex items-center justify-center">
         <agent-card
-        title="Agent Rondier"
-        content="En savoir plus sur l'agent rondier..."
+        title="Agent de Sécurité & de Prévention"
+        content="En savoir plus sur l'agent de sécurité..."
         src="/images/Cynophile_card.png"
-        alt="Agent Rondier"
-        href="/agent_rondier">
+        alt="Agent de Sécurité"
+        href="/agent_securite">
         </agent-card>
       </div>
       <div class="flex items-center justify-center">
@@ -47,32 +47,42 @@ export function AgentCynophile() {
       </div>
       <div class="flex items-center justify-center">
         <agent-card
-        title="Agent Rondier"
-        content="En savoir plus sur l'agent rondier..."
+        title="Agent SSIAP"
+        content="En savoir plus sur l'agent SSIAP..."
         src="/images/Cynophile_card.png"
-        alt="Agent Rondier"
+        alt="Agent SSIAP"
         href="/agent_rondier">
         </agent-card>
       </div>
       <div class="flex items-center justify-center">
         <agent-card
-        title="Agent Rondier"
-        content="En savoir plus sur l'agent rondier..."
+        title="Agent Homme Trafic"
+        content="En savoir plus sur l'agent trafic..."
         src="/images/Cynophile_card.png"
-        alt="Agent Rondier"
-        href="/agent_rondier">
+        alt="Agent Homme Trafic"
+        href="/agent_homme_trafic">
         </agent-card>
       </div>
       <div class="flex items-center justify-center">
         <agent-card
-        title="Agent Rondier"
-        content="En savoir plus sur l'agent rondier..."
+        title="Homme clés - Gestionnaire de clés"
+        content="En savoir plus sur l'Homme clés ..."
         src="/images/Cynophile_card.png"
-        alt="Agent Rondier"
-        href="/agent_rondier">
+        alt="homme clés"
+        href="/agent_homme_cles">
         </agent-card>
       </div>
     </div>
+    <media-block 
+        header-title="A propos" 
+        title="À propos de Vigilence Max"
+        first-content="Chez Vigilence Max, nous assurons la protection des biens, des infrastructures et des personnes avec rigueur, professionnalisme et réactivité."
+        second-content="Nous intervenons auprès des entreprises, des chantiers, des commerces et des sites industriels en mettant en place des dispositifs de sécurité adaptés à chaque environnement"
+        src="./public/images/0_about.webp" alt="image"
+        info-1="Une présence continue pour une sécurité sans interruption."
+        info-2="Personnel formé, certifié et expérimenté." 
+        info-3="Réactivité immédiate en cas d’incident">
+    </media-block>
   </section>
   `
 
@@ -80,7 +90,7 @@ export function AgentCynophile() {
   const mediaBlock = section.querySelector("media-block");
   mediaBlock.after(Benefits());
   const carousel = section.querySelector(".carousel-cards");
-  new Carousel(carousel, { slideView: 3, slideToScroll: 3 })
+  new Carousel(carousel, { slideView: 3, slideToScroll: 2 })
 
   return template.content;
 }

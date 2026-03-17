@@ -1,5 +1,4 @@
 import { Components } from "./components.js";
-
 export class AgentBlock extends Components {
 
   constructor() {
@@ -20,9 +19,9 @@ export class AgentBlock extends Components {
       .join('');
 
     this.innerHTML = `
-      <div class="mx-3.5 p-4 shadow-custom bg-white max-w-145">
+      <div class=" mx-3.5 p-4 shadow-custom bg-white max-w-145">
 
-        <div class="flex justify-between">
+        <div class="flex flex-col gap-4 lg:flex-row justify-between">
           <!--Content Block-->
           <div class="flex flex-col gap-8 max-w-60">
 

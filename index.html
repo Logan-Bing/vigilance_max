@@ -64,7 +64,7 @@
   <template id="header-template">
     <div class="relative">
       <header
-        class="container w-full z-20 absolute left-0 right-0 flex items-center justify-center pt-8 xl:justify-between">
+        class="container w-full z-22 absolute left-0 right-0 flex items-center justify-center pt-8 xl:justify-between">
         <a href="/">
           <img src="./public/logos/fulllogo_transparent_nobuffer.png" class="w-14 cursor-pointer xl:w-25" alt="logo">
         </a>
@@ -88,9 +88,15 @@
                 <li><a href="/agent_ssiap"
                     class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Agent
                     SSIAP</a></li>
-                <li><a href="/agent_intervention"
+                <li><a href="/agent_ssiap"
                     class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Agent
-                    intervention</a></li>
+                    sécurité</a></li>
+                <li><a href="/agent_ssiap"
+                    class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Homme
+                    trafic</a></li>
+                <li><a href="/agent_intervention"
+                    class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Homme
+                    clés</a></li>
               </ul>
             </li>
             <li><a href="/Contact"
@@ -113,16 +119,18 @@
     </div>
     <!-- MOBILE NAV -->
     <div
-      class="mobile-nav fixed z-10 inset-0 bg-base-black text-base-white translate-x-full transition-transform duration-300 xl:hidden">
+      class="mobile-nav fixed z-20 inset-0 bg-base-black text-base-white translate-x-full transition-transform duration-300 xl:hidden">
       <nav class="h-full flex flex-col items-center justify-center text-center px-6">
         <div class="flex flex-col gap-6">
           <span class="text-3xl text-base-grey">gardiennage humain</span>
 
           <ul class="flex flex-col gap-3 text-2xl font-urbanist">
             <li><a href="/agent_rondier">agent rondier</a></li>
-            <li><a href="/agent_intervention">agent d'intervention</a></li>
+            <li><a href="/agent_intervention">agent sécurité</a></li>
             <li><a href="/agent_ssiap">agent ssiap</a></li>
             <li><a href="/agent_cynophile">agent cynophile</a></li>
+            <li><a href="/agent_cynophile">homme trafic</a></li>
+            <li><a href="/agent_cynophile">homme clés</a></li>
           </ul>
         </div>
 
