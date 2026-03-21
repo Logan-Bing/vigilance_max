@@ -19,7 +19,7 @@ export function Home() {
                 <li>Réactivité garantie</li>
               </ul>
             </div>
-            <h1 class="text-center text-base-white">Votre partenaire en gardiennage & sécurité humaine <span class="text-500-primary">commerces et sites industriels</span></h1>
+            <h1 class="text-center text-base-white">Spécialistes de la sécurisation humaine en Île-de-France, <span class="text-500-primary">depuis plus de 25 ans.</span></h1>
             <a class="btn-primary" href="/Contact">Demander un devis</a>
           </div>
         </div> 
@@ -28,9 +28,11 @@ export function Home() {
       </div>
       <media-block 
           header-title="A propos" 
-          title="À propos de Vigilence Max"
-          first-content="Chez Vigilence Max, nous assurons la protection des biens, des infrastructures et des personnes avec rigueur, professionnalisme et réactivité."
-          second-content="Nous intervenons auprès des entreprises, des chantiers, des commerces et des sites industriels en mettant en place des dispositifs de sécurité adaptés à chaque environnement"
+          title="L’expérience, gage de qualité."
+          first-content="VIGILANCE MAX s’impose comme un acteur reconnu de la sécurité humaine en Île-de-France,
+mettant à votre service plus de 25 ans d’expérience."
+          second-content="Nous intervenons pour assurer la sécurisation de vos chantiers, sites industriels, établissements
+recevant du public, immeubles de grande hauteur, événements."
           src="./public/images/0_about.webp" alt="image"
           info-1="Une présence continue pour une sécurité sans interruption."
           info-2="Personnel formé, certifié et expérimenté." 
