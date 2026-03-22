@@ -19,6 +19,22 @@
   </div>
   <script type="module" src="/src/router.js"></script>
   <!-- TEMPLATE -->
+  <template id="contact-section">
+    <div class="bg-500-primary p-8">
+      <div class="container flex flex-col gap-8 justify-center items-center text-center">
+        <div>
+          <h2>Parlez nous de votre projet</h2>
+        </div>
+        <div>
+          <p>Nos équipes vous accompagnent pour définir un dispositif de sécurité sur mesure,
+            adapté à vos besoins et à
+            votre environnement.
+            Obtenez rapidement une proposition claire et personnalisée.</p>
+        </div>
+        <a href="/Contact" class="btn-secondary">Demander un devis</a>
+      </div>
+    </div>
+  </template>
   <template id="partners">
     <div class="partners-wrapper container">
       <div class="flex items-center justify-center">
@@ -88,13 +104,13 @@
                 <li><a href="/agent_ssiap"
                     class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Agent
                     SSIAP</a></li>
-                <li><a href="/agent_ssiap"
+                <li><a href="/agent_securite"
                     class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Agent
                     sécurité</a></li>
-                <li><a href="/agent_ssiap"
+                <li><a href="/agent_homme_trafic"
                     class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Homme
                     trafic</a></li>
-                <li><a href="/agent_intervention"
+                <li><a href="/agent_homme_cles"
                     class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out">Homme
                     clés</a></li>
               </ul>
@@ -156,11 +172,13 @@
             <div class="flex flex-col gap-8">
               <h3 class="font-urbanist font-medium text-white text-2xl tracking-[0.02em]">Sections</h3>
               <ul class="flex flex-col gap-4 font-montserrat font-normal text-white text-base">
-                <li><a href="#" class="hover:text-primary transition-colors">Accueil</a></li>
-                <li><a href="#" class="hover:text-primary transition-colors">Agent cynophile</a></li>
-                <li><a href="#" class="hover:text-primary transition-colors">Agent rondier</a></li>
-                <li><a href="#" class="hover:text-primary transition-colors">Agent SSIAP</a></li>
-                <li><a href="#" class="hover:text-primary transition-colors">Agent d'intervention</a></li>
+                <li><a href="/" class="hover:text-primary transition-colors">Accueil</a></li>
+                <li><a href="/agent_cynophile" class="hover:text-primary transition-colors">Agent cynophile</a></li>
+                <li><a href="/agent_rondier" class="hover:text-primary transition-colors">Agent rondier</a></li>
+                <li><a href="/agent_ssiap" class="hover:text-primary transition-colors">Agent SSIAP</a></li>
+                <li><a href="/agent_securite" class="hover:text-primary transition-colors">Agent sécurité</a></li>
+                <li><a href="/agent_homme_cles" class="hover:text-primary transition-colors">Homme clés</a></li>
+                <li><a href="/agent_homme_trafic" class="hover:text-primary transition-colors">Homme trafic</a></li>
               </ul>
             </div>
 

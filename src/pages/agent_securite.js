@@ -3,28 +3,28 @@ import { Benefits } from "../components/static/benefits";
 import { AgentCard } from "../components/agentCard";
 import { Carousel } from "../components/carousel";
 
-export function AgentRondier() {
+export function AgentSecurite() {
   const template = document.createElement("template");
   template.innerHTML = `
-  <section id=rondier-page class="overflow-x-hidden flex flex-col gap-8 xl:gap-32">
+  <section id=cynophile-page class="overflow-x-hidden flex flex-col gap-8 xl:gap-32">
     <agent-banner
     badge="Sécurité 24h/24"
-    title="Agent Rondier"
-    description="Spécialiste des rondes de surveillance, l’agent rondier assure un contrôle régulier des sites afin de prévenir les risques et détecter toute anomalie."
-    image="/images/Rondier_banner.webp"
+    title="Agent de sécurité et de prévention"
+    description="Professionnel de la surveillance et de la prévention, l’agent de sécurité assure la protection des personnes, des biens et des sites, tout en anticipant les risques."
+    image="/images/Security_banner.webp"
     cta-label="Contactez-nous"
     cta-href="/contact"
     layout="left"
     ></agent-banner>
     <media-block 
-        header-title="agent rondier" 
-        title="Une surveillance active et méthodique"
-        first-content="L’agent rondier assure une présence dynamique sur le terrain grâce à des rondes régulières et organisées. Il contrôle les installations, vérifie les points sensibles et s’assure du bon fonctionnement des dispositifs de sécurité."
-        second-content="Son rôle est essentiel pour anticiper les anomalies et garantir une surveillance continue, adaptée aux environnements industriels, commerciaux ou logistiques."
-        src="./public/images/Rondier_about.webp" alt="image"
-        info-1="Rondes régulières et planifiées"
-        info-2="Vérification des points sensibles" 
-        info-3="Surveillance active des installations">
+        header-title="Agent Securite" 
+        title="Un acteur clé de la sécurité quotidienne"
+        first-content="L’agent de sécurité et de prévention joue un rôle essentiel dans la protection des sites et des personnes. Grâce à son expérience et à sa vigilance constante, il assure une présence rassurante et dissuasive au quotidien."
+        second-content="Formé à la gestion des situations à risque, il intervient avec calme et professionnalisme pour prévenir les incidents et garantir un environnement sécurisé, adapté à chaque type de site."
+        src="./public/images/Security_about.webp" alt="image"
+        info-1="Présence dissuasive et rassurante"
+        info-2="Surveillance continue des lieux" 
+        info-3="Prévention des risques et incidents">
     </media-block>
     <div class="container carousel-cards">
       <div class="flex items-center justify-center">
@@ -38,11 +38,11 @@ export function AgentRondier() {
       </div>
       <div class="flex items-center justify-center">
         <agent-card
-        title="Agent de Sécurité & de Prévention"
-        content="En savoir plus sur l'agent de sécurité..."
-        src="/images/Security_card.webp"
-        alt="Agent de Sécurité"
-        href="/agent_securite">
+        title="Agent Rondier"
+        content="En savoir plus sur l'agent rondier..."
+        src="/images/Rondier_card.webp"
+        alt="Agent Rondier"
+        href="/agent_rondier">
         </agent-card>
       </div>
       <div class="flex items-center justify-center">
@@ -75,13 +75,13 @@ export function AgentRondier() {
     </div>
     <media-block 
       header-title="Missions" 
-      title="Les missions de l’agent rondier"
-      first-content="L’agent rondier effectue des rondes de sécurité afin de contrôler l’ensemble du site et de prévenir les incidents. Il vérifie les accès, les installations et s’assure du respect des consignes de sécurité."
-      second-content="En cas d’anomalie, il intervient rapidement et applique les procédures adaptées pour garantir la sécurité des lieux et des personnes."
-      src="./public/images/Rondier_missions.webp" alt="image"
-      info-1="Rondes de surveillance sur site"
-      info-2="Contrôle des accès et des installations" 
-      info-3="Détection des anomalies et incidents">
+      title="Les missions de l’agent de sécurité"
+      first-content="L’agent de sécurité assure des missions de surveillance, de contrôle et de prévention sur différents types de sites. Il veille au respect des consignes de sécurité et intervient en cas de situation inhabituelle."
+      second-content="Au quotidien, il effectue des rondes, contrôle les accès et garantit la sécurité des personnes et des biens. Sa présence permet d’anticiper les risques et de maintenir un environnement serein."
+      src="./public/images/Security_missions.webp" alt="image"
+      info-1="Contrôle des accès et filtrage des entrées"
+      info-2="Rondes de surveillance régulières"
+      info-3="Prévention des incidents et anomalies">
     </media-block>
   </section>
   `

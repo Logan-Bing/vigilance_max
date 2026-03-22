@@ -3,28 +3,28 @@ import { Benefits } from "../components/static/benefits";
 import { AgentCard } from "../components/agentCard";
 import { Carousel } from "../components/carousel";
 
-export function AgentSSIAP() {
+export function AgentTrafic() {
   const template = document.createElement("template");
   template.innerHTML = `
-  <section id=ssiap-page class="overflow-x-hidden flex flex-col gap-8 xl:gap-32">
+  <section id=cynophile-page class="overflow-x-hidden flex flex-col gap-8 xl:gap-32">
     <agent-banner
     badge="Sécurité 24h/24"
-    title="Agent SSIAP"
-    description="Spécialiste de la sécurité incendie, l’agent SSIAP assure la prévention des risques, la protection des personnes et la gestion des situations d’urgence."
-    image="/images/SSIAP_banner.webp"
+    title="Agent Trafic"
+    description="Spécialiste de la gestion des flux, l’agent de trafic organise et sécurise la circulation des véhicules et des personnes sur site."
+    image="/images/Trafic_banner.webp"
     cta-label="Contactez-nous"
     cta-href="/contact"
     layout="right"
     ></agent-banner>
     <media-block 
-        header-title="agent ssiap" 
-        title="Une expertise dédiée à la sécurité incendie"
-        first-content="L’agent SSIAP intervient pour prévenir les risques d’incendie et garantir la sécurité des occupants d’un site. Formé aux normes et aux procédures strictes, il veille au bon fonctionnement des équipements et à l’application des consignes de sécurité."
-        second-content="Sa présence permet d’anticiper les situations à risque et d’assurer une gestion rapide et efficace en cas d’incident."
-        src="./public/images/SSIAP_about.webp" alt="image"
-        info-1="Prévention des risques incendie"
-        info-2="Surveillance des équipements de sécurité" 
-        info-3="Application des procédures réglementaires">
+        header-title="agent trafic" 
+        title="Une gestion fluide et sécurisée des flux"
+        first-content="L’agent de trafic veille à la bonne organisation des flux de circulation sur les sites. Il oriente les véhicules et les personnes, tout en assurant le respect des consignes de sécurité."
+        second-content="Grâce à sa présence et à sa réactivité, il contribue à maintenir un environnement structuré, fluide et sécurisé, adapté aux contraintes du site."
+        src="./public/images/Trafic_about.webp" alt="image"
+        info-1="Gestion des flux de circulation"
+        info-2="Orientation des véhicules et des personnes" 
+        info-3="Prévention des risques liés aux déplacements">
     </media-block>
     <div class="container carousel-cards">
       <div class="flex items-center justify-center">
@@ -47,20 +47,20 @@ export function AgentSSIAP() {
       </div>
       <div class="flex items-center justify-center">
         <agent-card
+        title="Agent SSIAP"
+        content="En savoir plus sur l'agent SSIAP..."
+        src="/images/SSIAP_card.webp"
+        alt="Agent SSIAP"
+        href="/agent_ssiap">
+        </agent-card>
+      </div>
+      <div class="flex items-center justify-center">
+        <agent-card
         title="Agent de Sécurité & de Prévention"
         content="En savoir plus sur l'agent de sécurité..."
         src="/images/Security_card.webp"
         alt="Agent de Sécurité"
         href="/agent_securite">
-        </agent-card>
-      </div>
-      <div class="flex items-center justify-center">
-        <agent-card
-        title="Agent Homme Trafic"
-        content="En savoir plus sur l'agent trafic..."
-        src="/images/Trafic_card.webp"
-        alt="Agent Homme Trafic"
-        href="/agent_homme_trafic">
         </agent-card>
       </div>
       <div class="flex items-center justify-center">
@@ -75,13 +75,13 @@ export function AgentSSIAP() {
     </div>
     <media-block 
       header-title="Missions" 
-      title="Les missions de l’agent SSIAP"
-      first-content="L’agent SSIAP assure la surveillance des installations de sécurité incendie et veille au respect des normes en vigueur. Il effectue des contrôles réguliers et s’assure du bon fonctionnement des équipements."
-      second-content="En cas d’alerte, il intervient rapidement, coordonne les actions et met en œuvre les procédures nécessaires pour sécuriser les lieux et les personnes."
-      src="./public/images/SSIAP_missions.webp" alt="image"
-      info-1="Contrôle des systèmes de sécurité incendie"
-      info-2="Vérification des équipements et installations" 
-      info-3="Gestion des alertes et incidents">
+      title="Les missions de l’agent trafic"
+      first-content="L’agent de trafic organise la circulation afin de garantir la fluidité et la sécurité des déplacements. Il contrôle les accès, régule les flux et veille au respect des consignes."
+      second-content="En cas de situation particulière, il adapte ses actions pour assurer un trafic sécurisé et éviter tout incident."
+      src="./public/images/Trafic_missions.webp" alt="image"
+      info-1="Régulation de la circulation"
+      info-2="Contrôle des accès véhicules" 
+      info-3="Orientation et assistance des usagers">
     </media-block>
   </section>
   `

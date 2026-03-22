@@ -18,7 +18,7 @@ export function AgentCynophile() {
     ></agent-banner>
     <media-block 
         header-title="Agent cynophile" 
-        title="sécurité renforcée par le binôme homme-chien"
+        title="Sécurité renforcée par le binôme homme-chien"
         first-content="Chez Vigilence Max, nous assurons la protection des biens, des infrastructures et des personnes avec rigueur, professionnalisme et réactivité."
         second-content="Le chien, dressé pour détecter les comportements suspects et intervenir rapidement, agit comme un véritable atout dissuasif. Associé à l’expertise de l’agent, ce duo garantit une vigilance accrue, de jour comme de nuit, même dans des environnements complexes."
         src="./public/images/Cynophile_about.webp" alt="image"
@@ -31,7 +31,7 @@ export function AgentCynophile() {
         <agent-card
         title="Agent de Sécurité & de Prévention"
         content="En savoir plus sur l'agent de sécurité..."
-        src="/images/Security_card.png"
+        src="/images/Security_card.webp"
         alt="Agent de Sécurité"
         href="/agent_securite">
         </agent-card>
@@ -40,7 +40,7 @@ export function AgentCynophile() {
         <agent-card
         title="Agent Rondier"
         content="En savoir plus sur l'agent rondier..."
-        src="/images/Cynophile_card.png"
+        src="/images/Rondier_card.webp"
         alt="Agent Rondier"
         href="/agent_rondier">
         </agent-card>
@@ -49,16 +49,16 @@ export function AgentCynophile() {
         <agent-card
         title="Agent SSIAP"
         content="En savoir plus sur l'agent SSIAP..."
-        src="/images/Cynophile_card.png"
+        src="/images/SSIAP_card.webp"
         alt="Agent SSIAP"
-        href="/agent_rondier">
+        href="/agent_ssiap">
         </agent-card>
       </div>
       <div class="flex items-center justify-center">
         <agent-card
         title="Agent Homme Trafic"
         content="En savoir plus sur l'agent trafic..."
-        src="/images/Cynophile_card.png"
+        src="/images/Trafic_card.webp"
         alt="Agent Homme Trafic"
         href="/agent_homme_trafic">
         </agent-card>
@@ -67,7 +67,7 @@ export function AgentCynophile() {
         <agent-card
         title="Homme clés - Gestionnaire de clés"
         content="En savoir plus sur l'Homme clés ..."
-        src="/images/Cynophile_card.png"
+        src="/images/Keys_card.webp"
         alt="homme clés"
         href="/agent_homme_cles">
         </agent-card>
@@ -91,6 +91,9 @@ export function AgentCynophile() {
   mediaBlock.after(Benefits());
   const carousel = section.querySelector(".carousel-cards");
   new Carousel(carousel, { slideView: 3, slideToScroll: 2 })
+
+  const contactSection = document.querySelector("#contact-section").content.cloneNode(true);
+  section.appendChild(contactSection);
 
   return template.content;
 }

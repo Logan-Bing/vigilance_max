@@ -17,7 +17,7 @@ export class AgentCard extends Components {
     <div class="p-4 flex flex-col gap-8 rounded-2xl shadow-custom max-w-96">
       <!-- ImageBlock -->
       <div>
-        <img class="max-h-72 min-w-full rounded-2xl" src=${imageUrl} alt=${imageAlt}>
+        <img class="min-h-88 rounded-2xl" src=${imageUrl} alt=${imageAlt}>
       </div>
 
       <!-- ContentBlock-->
