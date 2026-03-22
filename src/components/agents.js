@@ -23,7 +23,7 @@ export class AgentBlock extends Components {
 
         <div class="flex flex-col gap-4 lg:flex-row justify-between">
           <!--Content Block-->
-          <div class="flex flex-col gap-8 max-w-60">
+          <div class="flex flex-col gap-8 xl:max-w-60">
 
             <div class="flex flex-col gap-2">
               <h3 class="text-500-primary">${title}</h3>
@@ -36,7 +36,7 @@ export class AgentBlock extends Components {
 
           </div>
           <!--Image Block-->
-          <img src="${imgUrl}" alt="${imgAlt}" loading="lazy">
+          <img class="max-h-[548px] xl:max-w-[244px]" src="${imgUrl}" alt="${imgAlt}" loading="lazy">
         </div>
 
       </div>

@@ -5,7 +5,8 @@ export class Carousel {
     this.element = element;
     this.options = Object.assign({}, {
       slideView: 1,
-      slideToScroll: 1
+      slideToScroll: 1,
+      infinite: false,
     }, options)
     let children = Array.from(element.children);
     this.root = this.createDivWithClass("carousel");
@@ -18,12 +19,20 @@ export class Carousel {
     this.items = children.map((child) => {
       const item = this.createDivWithClass("carousel__item");
       item.appendChild(child);
-      this.container.appendChild(item);
       return item
     })
+    // if (this.options.infinite) {
+    //   let offset = this.options.slideView * 2 - 1;
+    //   this.items = [
+    //     ...this.items.slice(this.items.length - offset).map(item => item.cloneNode(true)),
+    //     ...this.items,
+    //     ...this.items.slice(0, offset).map(item => item.cloneNode(true)),
+    //   ]
+    // }
+    this.items.forEach(item => this.container.appendChild(item));
     this.setStyle();
     this.createNavigation();
-    this.moveCallbacks.forEach(cb => cb(0));
+    this.moveCallbacks.forEach(cb => cb(this.currentItem));
     this.onWindowResize();
     window.addEventListener('resize', this.onWindowResize.bind(this));
   }

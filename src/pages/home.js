@@ -41,26 +41,19 @@ recevant du public, immeubles de grande hauteur, événements."
         <h2 class="text-center">Nos différents <span class="text-500-primary">agents</span></h2>
         <div class="carousel-agents">
           <agents-block
+              title="Agent de sécurité"
+              content="Nos agents SSIAP disposent des compétences nécessaires pour anticiper les risques incendie, porter  assistance aux personnes et gérer les situations critiques."
+              info-1="détection rapide"
+              info-2="détection rapide"
+              src="/images/Security_about.webp"
+          ></agents-block>
+          <agents-block
               title="Agent Cynophile"
               content="Nos agents cynophiles assurent une surveillance renforcée des sites. Grâce au binôme maître-chien, toute présence suspecte est détectée rapidement."
               info-1="détection rapide"
               info-2="détection rapide"
               src="/images/0_cynophile.webp"
               href="/agent_cynophile"
-          ></agents-block>
-          <agents-block
-              title="Agent Rondier"
-              content="Nos agents rondiers effectuent des rondes de surveillance régulières, contrôlent les installations et signalent toute anomalie.       pour assurer securité"
-              info-1="détection rapide"
-              info-2="détection rapide"
-              src="/images/0_rondier.webp"
-          ></agents-block>
-          <agents-block
-              title="Agent Trafic"
-              content="Nos agents rondiers effectuent des rondes de surveillance régulières, contrôlent les installations et signalent toute anomalie.       pour assurer securité"
-              info-1="détection rapide"
-              info-2="détection rapide"
-              src="/images/0_intervention.webp"
           ></agents-block>
           <agents-block
               title="Agent ssiap 1 - 2 - 3"
@@ -70,18 +63,25 @@ recevant du public, immeubles de grande hauteur, événements."
               src="/images/0_saap.webp"
           ></agents-block>
           <agents-block
+              title="Agent Rondier"
+              content="Nos agents rondiers effectuent des rondes de surveillance régulières, contrôlent les installations et signalent toute anomalie.       pour assurer securité"
+              info-1="détection rapide"
+              info-2="détection rapide"
+              src="/images/0_rondier.webp"
+          ></agents-block>
+          <agents-block
               title="Homme clés"
               content="Nos agents SSIAP disposent des compétences nécessaires pour anticiper les risques incendie, porter  assistance aux personnes et gérer les situations critiques."
               info-1="détection rapide"
               info-2="détection rapide"
-              src="/images/0_saap.webp"
+              src="/images/Keys_about.webp"
           ></agents-block>
           <agents-block
-              title="Agent de sécurité"
-              content="Nos agents SSIAP disposent des compétences nécessaires pour anticiper les risques incendie, porter  assistance aux personnes et gérer les situations critiques."
+              title="Agent Trafic"
+              content="Nos agents rondiers effectuent des rondes de surveillance régulières, contrôlent les installations et signalent toute anomalie.       pour assurer securité"
               info-1="détection rapide"
               info-2="détection rapide"
-              src="/images/0_saap.webp"
+              src="/images/0_intervention.webp"
           ></agents-block>
         </div>
       </section>
@@ -110,7 +110,7 @@ recevant du public, immeubles de grande hauteur, événements."
   const partnerPlaceholder = section.querySelector("#partners-placeholder");
   const partnerTemplate = document.querySelector("#partners").content.cloneNode(true);
   const partnerCarousel = partnerTemplate.querySelector(".partners-wrapper");
-  new Carousel(partnerCarousel, { slideView: 5, slideToScroll: 1 });
+  new Carousel(partnerCarousel, { slideView: 5, slideToScroll: 1, infinite: true });
   partnerPlaceholder.appendChild(partnerCarousel);
 
   mediaBlock.after(Benefits());
