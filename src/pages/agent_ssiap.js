@@ -21,7 +21,7 @@ export function AgentSSIAP() {
         title="Une expertise dédiée à la sécurité incendie"
         first-content="L’agent SSIAP intervient pour prévenir les risques d’incendie et garantir la sécurité des occupants d’un site. Formé aux normes et aux procédures strictes, il veille au bon fonctionnement des équipements et à l’application des consignes de sécurité."
         second-content="Sa présence permet d’anticiper les situations à risque et d’assurer une gestion rapide et efficace en cas d’incident."
-        src="./public/images/SSIAP_about.webp" alt="image"
+        src="./images/SSIAP_about.webp" alt="image"
         info-1="Prévention des risques incendie"
         info-2="Surveillance des équipements de sécurité" 
         info-3="Application des procédures réglementaires">
@@ -78,7 +78,7 @@ export function AgentSSIAP() {
       title="Les missions de l’agent SSIAP"
       first-content="L’agent SSIAP assure la surveillance des installations de sécurité incendie et veille au respect des normes en vigueur. Il effectue des contrôles réguliers et s’assure du bon fonctionnement des équipements."
       second-content="En cas d’alerte, il intervient rapidement, coordonne les actions et met en œuvre les procédures nécessaires pour sécuriser les lieux et les personnes."
-      src="./public/images/SSIAP_missions.webp" alt="image"
+      src="./images/SSIAP_missions.webp" alt="image"
       info-1="Contrôle des systèmes de sécurité incendie"
       info-2="Vérification des équipements et installations" 
       info-3="Gestion des alertes et incidents">

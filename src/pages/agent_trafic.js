@@ -21,7 +21,7 @@ export function AgentTrafic() {
         title="Une gestion fluide et sécurisée des flux"
         first-content="L’agent de trafic veille à la bonne organisation des flux de circulation sur les sites. Il oriente les véhicules et les personnes, tout en assurant le respect des consignes de sécurité."
         second-content="Grâce à sa présence et à sa réactivité, il contribue à maintenir un environnement structuré, fluide et sécurisé, adapté aux contraintes du site."
-        src="./public/images/Trafic_about.webp" alt="image"
+        src="./images/Trafic_about.webp" alt="image"
         info-1="Gestion des flux de circulation"
         info-2="Orientation des véhicules et des personnes" 
         info-3="Prévention des risques liés aux déplacements">
@@ -78,7 +78,7 @@ export function AgentTrafic() {
       title="Les missions de l’agent trafic"
       first-content="L’agent de trafic organise la circulation afin de garantir la fluidité et la sécurité des déplacements. Il contrôle les accès, régule les flux et veille au respect des consignes."
       second-content="En cas de situation particulière, il adapte ses actions pour assurer un trafic sécurisé et éviter tout incident."
-      src="./public/images/Trafic_missions.webp" alt="image"
+      src="./images/Trafic_missions.webp" alt="image"
       info-1="Régulation de la circulation"
       info-2="Contrôle des accès véhicules" 
       info-3="Orientation et assistance des usagers">

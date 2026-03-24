@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <title>vigilance-max</title>
@@ -55,25 +56,35 @@
     </div>
   </template>
   <template id="benefits">
-    <div class="container flex flex-col text-center gap-8 xl:gap-16">
-      <h2>Pourquoi nous <span class="text-500-primary">choisir ?</span></h2>
-      <div class="flex flex-wrap justify-center items-center gap-8 gap-y-8 text-center xl:justify-between">
-        <div class="flex flex-col gap-4 items-center xl:gap-8 xl:max-w-64">
-          <img class="w-16 h-16" src="./public/icons/icon/benefits.png" alt="">
-          <p>Prestations adaptées aux besoins des clients</p>
+    <div class="container flex flex-col gap-8 xl:gap-16">
+      <h2 class="text-center">Pourquoi nous <span class="text-500-primary text-center">choisir ?</span></h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+
+        <div class="flex flex-col gap-4 xl:gap-8 xl:max-w-64">
+          <h2><span class="text-500-primary">Professionnalisme & Compétences</span></h2>
+          <p>Nous attachons une attention particulière au recrutement de nos agents et veillons à maintenir leurs
+            compétences à jour grâce à des formations régulières.</p>
         </div>
-        <div class="flex flex-col gap-4 items-center xl:gap-8 xl:max-w-64">
-          <img class="w-16 h-16" src="./public/icons/icon/surveillance.png" alt="">
-          <p>Prestations adaptées aux besoins des clients</p>
+
+        <div class="flex flex-col gap-4 xl:gap-8 xl:max-w-64">
+          <h2><span class="text-500-primary">Disponibilité &amp; Réactivité</span></h2>
+          <p>Nos équipes restent mobilisables en permanence, de jour comme de nuit, afin d’intervenir rapidement
+            lorsque la situation l’exige.</p>
         </div>
-        <div class="flex flex-col gap-4 items-center xl:gap-8 xl:max-w-64">
-          <img class="w-16 h-16" src="./public/icons/icon/pro.png" alt="">
-          <p>Prestations adaptées aux besoins des clients</p>
+
+        <div class="flex flex-col gap-4 xl:gap-8 xl:max-w-64">
+          <h2><span class="text-500-primary">Adaptation &amp; Fléxibilité</span></h2>
+          <p>Chaque prestation est préparée avec soin pour s’intégrer parfaitement à votre organisation et
+            répondre précisément à vos enjeux.</p>
         </div>
-        <div class="flex flex-col gap-4 items-center xl:gap-8 xl:max-w-64">
-          <img class="w-16 h-16" src="./public/icons/icon/fast.png" alt="">
-          <p>Prestations adaptées aux besoins des clients</p>
+
+        <div class="flex flex-col gap-4 xl:gap-8 xl:max-w-64">
+          <h2><span class="text-500-primary">Transparence Totale</span></h2>
+          <p>Nous privilégions une communication transparente, accompagnée d’outils de suivi permettant de
+            contrôler efficacement le déroulement des missions.</p>
         </div>
+
       </div>
     </div>
   </template>
@@ -82,7 +93,7 @@
       <header
         class="container w-full z-22 absolute left-0 right-0 flex items-center justify-center pt-8 xl:justify-between">
         <a href="/">
-          <img src="./public/logos/fulllogo_transparent_nobuffer.png" class="w-14 cursor-pointer xl:w-25" alt="logo">
+          <img src="./logos/fulllogo_transparent_nobuffer.png" class="w-14 cursor-pointer xl:w-25" alt="logo">
         </a>
         <nav
           class="hidden xl:flex items-center gap-16 font-semibold text-base-white font-urbanist font-semibold tracking-[1px]">
@@ -92,7 +103,7 @@
                 <a
                   class="hover:underline underline-offset-4 decoration-transparent hover:decoration-current transition-all duration-300 ease-out ">Gardiennage
                   Humain</a>
-                <img src="./public/icons/icon/Group.svg" alt="icone fleche" class="">
+                <img src="/icons/icon/Group.svg" alt="icone fleche" class="">
               </div>
               <ul class="subnav-wrapper bg-white-bg text-base-grey mt-2 p-4 flex flex-col gap-4 absolute hidden">
                 <li><a href="/agent_securite"
@@ -121,7 +132,6 @@
           </ul>
           <a href="/Contact" class="btn-primary flex gap-2 font-urbanist">
             Devis
-            <img src="./public/icons/icon/Vector.svg" alt="icone mail">
           </a>
         </nav>
 
@@ -141,12 +151,12 @@
           <span class="text-3xl text-base-grey">gardiennage humain</span>
 
           <ul class="flex flex-col gap-3 text-2xl font-urbanist">
-            <li><a href="/agent_rondier">agent rondier</a></li>
-            <li><a href="/agent_intervention">agent sécurité</a></li>
-            <li><a href="/agent_ssiap">agent ssiap</a></li>
+            <li><a href="/agent_securite">agent sécurité</a></li>
             <li><a href="/agent_cynophile">agent cynophile</a></li>
-            <li><a href="/agent_cynophile">homme trafic</a></li>
-            <li><a href="/agent_cynophile">homme clés</a></li>
+            <li><a href="/agent_ssiap">agent ssiap</a></li>
+            <li><a href="/agent_rondier">agent rondier</a></li>
+            <li><a href="/agent_homme_cles">homme clés</a></li>
+            <li><a href="/agent_homme_trafic">homme trafic</a></li>
           </ul>
         </div>
 
@@ -161,7 +171,7 @@
 
           <!-- Logo -->
           <div class="w-[180px] sm:w-[220px] lg:w-[296px] shrink-0">
-            <img src="https://www.figma.com/api/mcp/asset/2762a944-117d-4e99-83c0-fee354365f4c" alt="Vigilance Max"
+            <img src="/logos/fulllogo_transparent_nobuffer.png" alt="Vigilance Max"
               class="w-full h-auto object-contain" />
           </div>
 
@@ -173,10 +183,10 @@
               <h3 class="font-urbanist font-medium text-white text-2xl tracking-[0.02em]">Sections</h3>
               <ul class="flex flex-col gap-4 font-montserrat font-normal text-white text-base">
                 <li><a href="/" class="hover:text-primary transition-colors">Accueil</a></li>
-                <li><a href="/agent_cynophile" class="hover:text-primary transition-colors">Agent cynophile</a></li>
-                <li><a href="/agent_rondier" class="hover:text-primary transition-colors">Agent rondier</a></li>
-                <li><a href="/agent_ssiap" class="hover:text-primary transition-colors">Agent SSIAP</a></li>
                 <li><a href="/agent_securite" class="hover:text-primary transition-colors">Agent sécurité</a></li>
+                <li><a href="/agent_cynophile" class="hover:text-primary transition-colors">Agent cynophile</a></li>
+                <li><a href="/agent_ssiap" class="hover:text-primary transition-colors">Agent SSIAP</a></li>
+                <li><a href="/agent_rondier" class="hover:text-primary transition-colors">Agent rondier</a></li>
                 <li><a href="/agent_homme_cles" class="hover:text-primary transition-colors">Homme clés</a></li>
                 <li><a href="/agent_homme_trafic" class="hover:text-primary transition-colors">Homme trafic</a></li>
               </ul>
@@ -197,7 +207,6 @@
             <div class="flex flex-col gap-8">
               <h3 class="font-urbanist font-medium text-white text-2xl tracking-[0.02em]">Adresse</h3>
               <ul class="flex flex-col gap-4 font-montserrat text-base">
-                <li class="text-white">Nazar</li>
                 <li><a href="#" class="font-bold text-500-primary hover:opacity-80 transition-opacity">102, Avenue des
                     Champs Elysées 75008 Paris</a></li>
               </ul>

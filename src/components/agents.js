@@ -10,33 +10,27 @@ export class AgentBlock extends Components {
     const content = this.attr("content");
     const imgUrl = this.attr("src");
     const imgAlt = this.attr("alt");
-    const info_1 = this.attr("info-1");
-    const info_2 = this.attr("info-2");
     const redirectUrl = this.attr("href");
 
-    const listItems = [info_1, info_2]
-      .map((info) => this.buildListItem(info))
-      .join('');
-
     this.innerHTML = `
-      <div class=" mx-3.5 p-4 shadow-custom bg-white max-w-145">
+      <div class="mx-3.5 p-4 shadow-custom bg-white max-w-145 h-full">
 
-        <div class="flex flex-col gap-4 lg:flex-row justify-between">
+        <div class="flex flex-col gap-4 lg:flex-row h-full">
           <!--Content Block-->
-          <div class="flex flex-col gap-8 xl:max-w-60">
+          <div class="flex flex-col justify-between gap-8 xl:max-w-60 flex-1">
 
             <div class="flex flex-col gap-2">
               <h3 class="text-500-primary">${title}</h3>
               <p>${content}</p>
             </div>
             
-            <ul class="flex flex-col gap-2">${listItems}</ul>
-
             <a class="btn-primary self-start" href="${redirectUrl}" >En savoir plus</a>
 
           </div>
           <!--Image Block-->
-          <img class="max-h-[548px] xl:max-w-[244px]" src="${imgUrl}" alt="${imgAlt}" loading="lazy">
+          <div class="min-h-[336px] max-h-[336px] lg:w-[244px] lg:shrink-0 overflow-hidden">
+            <img class="w-full h-full object-cover" src="${imgUrl}" alt="${imgAlt}" loading="lazy">
+          </div>
         </div>
 
       </div>

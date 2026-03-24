@@ -21,7 +21,7 @@ export function AgentKeys() {
         title="Une présence de confiance en toute autonomie"
         first-content="L’homme clés intervient en dehors des horaires d’activité pour assurer l’ouverture, la fermeture et la sécurisation des sites. Totalement autonome, il détient la responsabilité des accès et agit selon des procédures strictes."
         second-content="Sa fiabilité et sa rigueur garantissent une gestion sécurisée des lieux, même en l’absence de personnel sur site."
-        src="./public/images/Keys_about.webp" alt="image"
+        src="./images/Keys_card.webp" alt="image"
         info-1="Ouverture et fermeture des sites"
         info-2="Gestion sécurisée des accès" 
         info-3="Intervention en toute autonomie">
@@ -78,7 +78,7 @@ export function AgentKeys() {
       title="Les missions de l'Homme clés"
       first-content="L’homme clés assure la gestion des accès et la sécurisation des sites en dehors des horaires d’ouverture. Il réalise les opérations d’ouverture et de fermeture et veille au respect des consignes de sécurité."
       second-content="En cas d’anomalie, il intervient rapidement et met en œuvre les actions nécessaires pour garantir l’intégrité des lieux."
-      src="./public/images/Keys_missions.webp" alt="image"
+      src="./images/Keys_missions.webp" alt="image"
       info-1="Ouverture et fermeture sécurisées"
       info-2="Vérification des accès et des installations" 
       info-3="Surveillance ponctuelle du site">

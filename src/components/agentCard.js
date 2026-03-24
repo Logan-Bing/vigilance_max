@@ -14,10 +14,10 @@ export class AgentCard extends Components {
     const redirectLink = this.attr("href");
 
     this.innerHTML = `
-    <div class="p-4 flex flex-col gap-8 rounded-2xl shadow-custom max-w-96">
+    <div class="p-4 flex flex-col gap-8 rounded-2xl shadow-custom min-w-96 max-w-96">
       <!-- ImageBlock -->
-      <div>
-        <img class="min-h-88 rounded-2xl" src=${imageUrl} alt=${imageAlt}>
+      <div class="h-64 w-full rounded-2xl overflow-hidden">
+        <img class="w-full h-full object-cover object-top" src=${imageUrl} alt=${imageAlt}>
       </div>
 
       <!-- ContentBlock-->

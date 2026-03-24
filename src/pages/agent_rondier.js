@@ -21,7 +21,7 @@ export function AgentRondier() {
         title="Une surveillance active et méthodique"
         first-content="L’agent rondier assure une présence dynamique sur le terrain grâce à des rondes régulières et organisées. Il contrôle les installations, vérifie les points sensibles et s’assure du bon fonctionnement des dispositifs de sécurité."
         second-content="Son rôle est essentiel pour anticiper les anomalies et garantir une surveillance continue, adaptée aux environnements industriels, commerciaux ou logistiques."
-        src="./public/images/Rondier_about.webp" alt="image"
+        src="./images/Rondier_about.webp" alt="image"
         info-1="Rondes régulières et planifiées"
         info-2="Vérification des points sensibles" 
         info-3="Surveillance active des installations">
@@ -78,7 +78,7 @@ export function AgentRondier() {
       title="Les missions de l’agent rondier"
       first-content="L’agent rondier effectue des rondes de sécurité afin de contrôler l’ensemble du site et de prévenir les incidents. Il vérifie les accès, les installations et s’assure du respect des consignes de sécurité."
       second-content="En cas d’anomalie, il intervient rapidement et applique les procédures adaptées pour garantir la sécurité des lieux et des personnes."
-      src="./public/images/Rondier_missions.webp" alt="image"
+      src="./images/Rondier_missions.webp" alt="image"
       info-1="Rondes de surveillance sur site"
       info-2="Contrôle des accès et des installations" 
       info-3="Détection des anomalies et incidents">

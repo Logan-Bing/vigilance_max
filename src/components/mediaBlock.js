@@ -13,17 +13,10 @@ export class mediaBlock extends Components {
     const secondContent = this.attr("second-content");
     const imageUrl = this.attr("src");
     const imageAlt = this.attr("alt");
-    const info_1 = this.attr("info-1");
-    const info_2 = this.attr("info-2");
-    const info_3 = this.attr("info-3");
     let reverse = this.attr("reverse");
 
     if (!reverse)
       reverse = "flex-row";
-
-    const listItems = [info_1, info_2, info_3]
-      .map((i) => this.buildListItem(i))
-      .join('');
 
     this.innerHTML = `
       <div class="container flex flex-col xl:flex-row items-center gap-8">
@@ -41,10 +34,6 @@ export class mediaBlock extends Components {
               <p class="font-medium">${secondContent}</p>
           </div>
 
-          <ul class="list flex flex-col gap-2">
-            ${listItems}
-          </ul>
-
           <a class="btn-primary self-start" href="/Contact">Demander un devis</a>
 
         </div>
@@ -53,7 +42,7 @@ export class mediaBlock extends Components {
         <div class="img-wrapper">
           <div class="triangle"></div>
           <div class="img-card">
-            <img src="${imageUrl}" alt="${imageAlt}" loading="lazy">
+            <img class="object-cover" src="${imageUrl}" alt="${imageAlt}" loading="lazy">
           </div>
         </div>
       </div>
