@@ -13,7 +13,7 @@ export function AgentCynophile() {
     description="Associer l’expertise humaine à la capacité de détection et de dissuasion canine permet d’offrir un niveau de sécurité supérieur."
     image="/images/Cynophile_banner.webp"
     cta-label="Contactez-nous"
-    cta-href="/contact"
+    cta-href="/Contact"
     layout="left"
     ></agent-banner>
     <media-block 

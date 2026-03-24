@@ -13,7 +13,7 @@ export function AgentKeys() {
     description="Garant de la sécurité en dehors des heures d’ouverture, l’homme clés assure l’accès, la surveillance et la gestion des sites en toute autonomie."
     image="/images/Keys_banner.webp"
     cta-label="Contactez-nous"
-    cta-href="/contact"
+    cta-href="/Contact"
     layout="right"
     ></agent-banner>
     <media-block 

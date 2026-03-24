@@ -18,7 +18,7 @@ import { Components } from "./components.js";
  *   description="Associer l'expertise humaine à la capacité de détection..."
  *   image="/images/cynophile.jpg"
  *   cta-label="Contactez-nous"
- *   cta-href="/contact"
+ *   cta-href="/Contact"
  *   layout="left"
  * ></agent-banner>
  */

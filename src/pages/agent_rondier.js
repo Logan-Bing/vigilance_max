@@ -13,7 +13,7 @@ export function AgentRondier() {
     description="Spécialiste des rondes de surveillance, l’agent rondier assure un contrôle régulier des sites afin de prévenir les risques et détecter toute anomalie."
     image="/images/Rondier_banner.webp"
     cta-label="Contactez-nous"
-    cta-href="/contact"
+    cta-href="/Contact"
     layout="left"
     ></agent-banner>
     <media-block 

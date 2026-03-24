@@ -13,7 +13,7 @@ export function AgentTrafic() {
     description="Spécialiste de la gestion des flux, l’agent de trafic organise et sécurise la circulation des véhicules et des personnes sur site."
     image="/images/Trafic_banner.webp"
     cta-label="Contactez-nous"
-    cta-href="/contact"
+    cta-href="/Contact"
     layout="right"
     ></agent-banner>
     <media-block 

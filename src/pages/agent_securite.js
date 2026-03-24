@@ -13,7 +13,7 @@ export function AgentSecurite() {
     description="Professionnel de la surveillance et de la prévention, l’agent de sécurité assure la protection des personnes, des biens et des sites, tout en anticipant les risques."
     image="/images/Security_banner.webp"
     cta-label="Contactez-nous"
-    cta-href="/contact"
+    cta-href="/Contact"
     layout="left"
     ></agent-banner>
     <media-block 

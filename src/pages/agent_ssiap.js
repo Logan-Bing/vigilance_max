@@ -13,7 +13,7 @@ export function AgentSSIAP() {
     description="Spécialiste de la sécurité incendie, l’agent SSIAP assure la prévention des risques, la protection des personnes et la gestion des situations d’urgence."
     image="/images/SSIAP_banner.webp"
     cta-label="Contactez-nous"
-    cta-href="/contact"
+    cta-href="/Contact"
     layout="right"
     ></agent-banner>
     <media-block 
