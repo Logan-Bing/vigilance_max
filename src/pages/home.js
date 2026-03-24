@@ -67,7 +67,7 @@ quotidien, grâce à des équipes engagées, réactives et pleinement opération
                 content="Nos équipes maître-chien constituent un appui opérationnel précieux pour la protection de vos sites.
   La mobilité et la vigilance du chien facilitent l’identification de toute présence suspecte."
                 info-1="Dissuasion renforcée"
-                info-2="Détection rapide"
+                info-2="Détection rapide"  
                 src="/images/0_cynophile.webp"
                 href="/agent_cynophile"
             ></agents-block>

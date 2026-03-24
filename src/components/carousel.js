@@ -179,11 +179,13 @@ export class Carousel {
   }
 
   onWindowResize() {
-    let mobile = window.innerWidth < 1280;
-    if (mobile !== this.isMobile) {
-      this.isMobile = mobile;
-      this.setStyle();
-      this.moveCallbacks.forEach((cb) => cb(this.currentItem));
+    if (this.options.autoplay === false) {
+      let mobile = window.innerWidth < 1280;
+      if (mobile !== this.isMobile) {
+        this.isMobile = mobile;
+        this.setStyle();
+        this.moveCallbacks.forEach((cb) => cb(this.currentItem));
+      }
     }
   }
 
