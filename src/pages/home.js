@@ -10,7 +10,7 @@ export function Home() {
   template.innerHTML = `    
     <section id=home class="overflow-x-hidden flex flex-col gap-8 xl:gap-32">
       <div class="flex flex-col">
-        <div class="flex items-center justify-center bg-[url(/images/home.webp)] h-screen">
+        <div class="flex items-center justify-center bg-[url(/images/home.webp)] bg-right h-screen">
           <div class="absolute inset-0 bg-black/50"></div>
           <div class="relative z-10 px-8 flex flex-col gap-8 items-center justify-center xl:max-w-7xl">
             <div class="flex items-center justify-center bg-base-black rounded-full">
@@ -36,9 +36,9 @@ Nous sommes très réactifs et disponibles 24h/24, 7j/7.</p>
           first-content="VIGILANCE MAX s’impose comme un acteur reconnu de la sécurité humaine en Île-de-France,
 mettant à votre service plus de 25 ans d’expérience. Nous intervenons pour assurer la sécurisation de vos chantiers, sites industriels, établissements
 recevant du public, immeubles de grande hauteur, événements.
-        Nos agents sont rigoureusement sélectionnés"
+        "
           second-content="Nos agents sont rigoureusement sélectionnés, formés, encadrés et suivis afin de garantir des
-prestations de qualité, adaptées à vos risques et à vos exigences opérationnelles.Notre objectif est simple : vous offrir une sécurisation efficace et une véritable tranquillité d’esprit au
+prestations de qualité, adaptées à vos risques et à vos exigences opérationnelles.<br>Notre objectif est simple : vous offrir une sécurisation efficace et une véritable tranquillité d’esprit au
 quotidien, grâce à des équipes engagées, réactives et pleinement opérationnelles."
           src="/images/0_about.webp" alt="image"
           info-1="Une présence continue pour une sécurité sans interruption."
@@ -233,7 +233,9 @@ quotidien, grâce à des équipes engagées, réactives et pleinement opération
   const partnerPlaceholder = section.querySelector("#partners-placeholder");
   const partnerTemplate = document.querySelector("#partners").content.cloneNode(true);
   const partnerCarousel = partnerTemplate.querySelector(".partners-wrapper");
-  new Carousel(partnerCarousel, { slideView: 5, slideToScroll: 1, autoplay: true, loop: true });
+  let slideView = 5;
+  if (window.innerWidth < 1280) slideView = 2;
+  new Carousel(partnerCarousel, { slideView, slideToScroll: 1, autoplay: true, loop: true });
   partnerPlaceholder.appendChild(partnerCarousel);
 
   mediaBlock.after(Benefits());
